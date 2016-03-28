@@ -1,0 +1,25 @@
+{
+  "name": "farmers-market",
+  "description": "Submission for Dream It Code It Win It 2016",
+  "main": "server.js",
+  "authors": [
+    "captiosus (Roy Xu)",
+    "omgimanerd (Alvin Lin)",
+    "bleepbloopsify (Leon Chou)",
+    "+1 Erik"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/captiosus/farmers-market",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2"
+  }
+}

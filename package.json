@@ -1,0 +1,32 @@
+{
+  "name": "farmers-market",
+  "version": "1.0.0",
+  "description": "Submission for Dream It Code It Win It 2016",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/captiosus/farmers-market.git"
+  },
+  "author": "captiosus (Roy Xu), omgimanerd (Alvin Lin), bleepbloopsify (Leon Chou), +1 Erik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/captiosus/farmers-market/issues"
+  },
+  "homepage": "https://github.com/captiosus/farmers-market#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bower": "^1.7.7",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "jade": "^1.11.0",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "merge-stream": "^1.0.0",
+    "mongodb": "^2.1.11",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.1"
+  }
+}
