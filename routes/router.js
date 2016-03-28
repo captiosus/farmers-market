@@ -1,0 +1,102 @@
+/**
+ * @fileoverview Router for the server.
+ * @author alvin.lin.dev@gmail.com (Alvin Lin)
+ */
+
+// Dependencies
+var express = require('express');
+
+var AccountManager = require('../lib/AccountManager');
+
+var accountManager = AccountManager.create();
+var router = express.Router();
+
+router.get('/', function(request, response) {
+  response.render('index');
+});
+
+router.get('/register', function(request, response) {
+  response.redirect('/');
+});
+
+router.post('/register', function(request, response) {
+  var username = request.body.username;
+  var password = request.body.password;
+  var email = request.body.email;
+
+  if (request.session.username) {
+    response.json({
+      success: false,
+      message: 'You must log out in order to register a user!'
+    });
+  }
+  if (!AccountManager.isValidUsername(username)) {
+    response.json({
+      success: false,
+      message: 'Invalid username!'
+    });
+  }
+  if (!AccountManager.isValidPassword(password)) {
+    response.json({
+      success: false,
+      message: 'Your password is too short.'
+    });
+  }
+
+  accountManager.registerUser(username, password, email, function(status) {
+    if (status) {
+      request.session.username = username;
+      response.json({
+        success: true,
+        message: 'Successfully registered!'
+      })
+    } else {
+      response.json({
+        success: false,
+        message: 'Your username is taken.'
+      })
+    }
+  });
+});
+
+router.get('/login', function(request, response) {
+  response.redirect('/');
+});
+
+router.post('/login', function(request, response) {
+  var username = request.body.username;
+  var password = request.body.password;
+
+  if (request.session.username) {
+    response.json({
+      success: false,
+      message: 'You are already logged in.'
+    });
+  }
+  accountManager.isUserAuthenticated(username, password, function(status) {
+    if (status) {
+      request.session.username = username;
+      response.json({
+        success: true,
+        message: 'Successfully logged in!'
+      });
+    } else {
+      response.json({
+        success: false,
+        message: 'Invalid credentials.'
+      });
+    }
+  });
+});
+
+router.get('/logout', function(request, response) {
+  request.session.username = null;
+  response.redirect('/');
+});
+
+router.post('/logout', function(request, response) {
+  request.session.username = null;
+  response.redirect('/');
+});
+
+module.exports = router;

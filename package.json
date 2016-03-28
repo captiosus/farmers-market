@@ -22,8 +22,6 @@
     "express": "^4.13.4",
     "express-session": "^1.13.0",
     "jade": "^1.11.0",
-    "less-plugin-autoprefix": "^1.5.1",
-    "less-plugin-clean-css": "^1.5.1",
     "merge-stream": "^1.0.0",
     "mongodb": "^2.1.11",
     "morgan": "^1.7.0",

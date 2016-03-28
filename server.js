@@ -24,12 +24,11 @@ var morgan = require('morgan');
 var session = require('express-session');
 var mongodb = require('mongodb');
 
-var AccountManager = require('./lib/AccountManager');
+var router = require('./routes/router');
 
 // Initialization.
 var app = express();
 var server = http.Server(app);
-var acm = AccountManager.create();
 
 app.set('port', PORT_NUMBER);
 app.set('view engine', 'jade');
@@ -50,9 +49,7 @@ app.use('/shared',
 // Use request.body for POST request params.
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', function(request, response) {
-  response.render('index');
-})
+app.use('/', router);
 
 // Starts the server.
 server.listen(PORT_NUMBER, function() {
