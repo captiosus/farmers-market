@@ -52,7 +52,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(request, response) {
   response.render('index');
-})
+});
+
+app.get('/listings', function(request, response) {
+  response.render('listings');
+});
 
 // Starts the server.
 server.listen(PORT_NUMBER, function() {
