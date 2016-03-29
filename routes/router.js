@@ -6,9 +6,9 @@
 // Dependencies
 var express = require('express');
 
-var AccountManager = require('../lib/AccountManager');
+var DatabaseManager = require('../lib/DatabaseManager');
 
-var accountManager = AccountManager.create();
+var DatabaseManager = DatabaseManager.create();
 var router = express.Router();
 
 router.get('/', function(request, response) {
@@ -30,20 +30,20 @@ router.post('/register', function(request, response) {
       message: 'You must log out in order to register a user!'
     });
   }
-  if (!AccountManager.isValidUsername(username)) {
+  if (!DatabaseManager.isValidUsername(username)) {
     response.json({
       success: false,
       message: 'Invalid username!'
     });
   }
-  if (!AccountManager.isValidPassword(password)) {
+  if (!DatabaseManager.isValidPassword(password)) {
     response.json({
       success: false,
       message: 'Your password is too short.'
     });
   }
 
-  accountManager.registerUser(username, password, email, function(status) {
+  DatabaseManager.registerUser(username, password, email, function(status) {
     if (status) {
       request.session.username = username;
       response.json({
@@ -73,7 +73,7 @@ router.post('/login', function(request, response) {
       message: 'You are already logged in.'
     });
   }
-  accountManager.isUserAuthenticated(username, password, function(status) {
+  DatabaseManager.isUserAuthenticated(username, password, function(status) {
     if (status) {
       request.session.username = username;
       response.json({
