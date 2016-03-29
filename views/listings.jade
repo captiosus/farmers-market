@@ -1,0 +1,51 @@
+extends layout.jade
+
+block head
+  title= "Listings"
+  link(href='public/css/listings.css', rel='stylesheet')
+
+block body
+  #top
+    #filter
+      #distance
+        input.textbox(type="text", name="distance") 
+        a.button(href="#")
+          | mi
+      label(for="bid", class="checkbox-label")
+        input(type="checkbox", name="bid")
+        | bid
+      label(for="buy", class="checkbox-label")
+        input(type="checkbox", name="buy")
+        | buy
+      #price
+        label(for="price-from")
+        | $ 
+        input.textbox(type="text", name="price-from")
+        label(for="price-to")
+        |  – $ 
+        input.textbox(type="text", name="price-to")
+      label(for="meetup", class="checkbox-label")
+        input(type="checkbox", name="meetup")
+        | meetup?
+      h4
+        | Produce
+      ul#produce
+        li
+        label(for="bid", class="checkbox-label")
+          input(type="checkbox", name="carrot")
+          | carrot
+        li
+        label(for="bid", class="checkbox-label")
+          input(type="checkbox", name="cucumber")
+          | cucumber
+        li
+        label(for="bid", class="checkbox-label")
+          input(type="checkbox", name="apple")
+          | apple
+    #listings-container
+      #listings
+        li
+          
+  #bottom
+    
+          

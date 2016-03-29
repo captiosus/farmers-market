@@ -1,0 +1,47 @@
+body {
+  margin: 0px; }
+
+.button {
+  border: 1px solid black;
+  color: black;
+  width: 110px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none; }
+  .button:focus {
+    outline: none; }
+
+.textbox {
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 0px; }
+  .textbox:focus {
+    outline: none; }
+
+#filter {
+  width: 300px;
+  padding-left: 30px;
+  padding-top: 30px; }
+  #filter #distance {
+    display: flex;
+    justify-content: flex-start; }
+    #filter #distance input {
+      width: 30px; }
+    #filter #distance .button {
+      width: 30px;
+      margin-left: 10px; }
+  #filter .checkbox-label {
+    display: block;
+    margin-top: 20px; }
+  #filter #price {
+    margin-top: 20px; }
+    #filter #price input {
+      width: 30px; }
+  #filter #produce {
+    list-style-type: none;
+    padding: 0px; }
+
+/*# sourceMappingURL=listings.css.map */

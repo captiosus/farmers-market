@@ -1,0 +1,25 @@
+body {
+  margin: 0px;
+}
+.button {
+  border: 1px solid black;
+  color: black;
+  width: 110px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  &:focus {
+    outline: none;
+  }
+}
+.textbox {
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 0px;
+  &:focus {
+    outline: none;
+  }
+}
