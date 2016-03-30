@@ -3,18 +3,18 @@ extends layout.jade
 block head
   title= "Home Screen"
   link(href='public/css/index.css', rel='stylesheet')
+  script(src="public/bower/jquery/dist/jquery.min.js")
 
 block body
   #plant-container
-    #logo
-      | Farmers Market
+    #logo Farmers Market
     #zipcode
       input.textbox(type="text", name="zipcode", placeholder="zipcode")
-      a.button(href="#")
-        | GO
+      a.button(href="#") GO
     #login
-      a.button(href="#")
-        | Login
+      a.button(href="#") Login
     #register
-      a.button(href="#")
-        | Register
+      a.button(href="#") Register
+
+block endscript
+  script(src="public/javascripts/index.js")
