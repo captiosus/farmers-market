@@ -51,6 +51,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/', router);
 
+
 // Starts the server.
 server.listen(PORT_NUMBER, function() {
   console.log('STARTING SERVER ON PORT ' + PORT_NUMBER);
