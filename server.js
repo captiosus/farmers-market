@@ -4,7 +4,7 @@
  */
 
 // Constants
-var DEV_MODE = true;
+var DEV_MODE = false;
 var IP = process.env.IP || 'localhost';
 var PORT_NUMBER = process.env.PORT || 5000;
 
@@ -50,10 +50,8 @@ app.use('/shared',
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/', router);
-if(DEV_MODE){
-  var test = require('./test/test')
-  app.use('/test',test);
-}
+
+app.locals.dev_mode = DEV_MODE;
 
 // Starts the server.
 server.listen(PORT_NUMBER, function() {
