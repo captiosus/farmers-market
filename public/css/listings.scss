@@ -1,0 +1,32 @@
+@import "style";
+
+#filter {
+  width: 300px;
+  padding-left: 30px;
+  padding-top: 30px;
+  #distance {
+    display: flex;
+    justify-content: flex-start;
+    input {
+      width: 30px;
+    }
+    .button {
+      width: 30px;
+      margin-left: 10px;
+    }
+  }
+  .checkbox-label {
+    display: block;
+    margin-top: 20px;
+  }
+  #price {
+    margin-top: 20px;
+    input {
+      width: 30px;
+    }
+  }
+  #produce {
+    list-style-type: none;
+    padding: 0px;
+  }
+}

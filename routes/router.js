@@ -62,6 +62,8 @@ router.get('/test', function(request, response){
     console.log(document);
     response.end(JSON.stringify(document)+ "\n");
   });
+router.get('/listings', function(request, response) {
+  response.render('listings');
 });
 
 router.get('/register', function(request, response) {
@@ -98,12 +100,12 @@ router.post('/register', function(request, response) {
       response.json({
         success: true,
         message: 'Successfully registered!'
-      })
+      });
     } else {
       response.json({
         success: false,
         message: 'Your username is taken.'
-      })
+      });
     }
   });
 });
