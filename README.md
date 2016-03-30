@@ -1,4 +1,4 @@
-# farmers-market
+# NutriTrade
   Submission for Dream It Code It Win It 2016
 
 ## Creators
