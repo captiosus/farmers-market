@@ -28,5 +28,7 @@
     ...
   ],
   price: float,
+  title: String,
+  description: String,
 }
 ```

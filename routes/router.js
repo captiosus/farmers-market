@@ -8,7 +8,7 @@ var express = require('express');
 
 var DatabaseManager = require('../lib/DatabaseManager');
 
-var DatabaseManager = DatabaseManager.create();
+var dbm = DatabaseManager.create();
 var router = express.Router();
 
 router.get('/', function(request, response) {
@@ -25,6 +25,9 @@ router.get('/test', function(request, response){
 
 router.get('/listings', function(request, response) {
   response.render('listings');
+});
+router.get('/listings/:id', function(request, response){
+  D
 });
 
 router.get('/register', function(request, response) {
@@ -43,20 +46,20 @@ router.post('/register', function(request, response) {
       message: 'You must log out in order to register a user!'
     });
   }
-  if (!DatabaseManager.isValidUsername(username)) {
+  if (!dbm.isValidUsername(username)) {
     response.json({
       success: false,
       message: 'Invalid username!'
     });
   }
-  if (!DatabaseManager.isValidPassword(password)) {
+  if (!dbm.isValidPassword(password)) {
     response.json({
       success: false,
       message: 'Your password is too short.'
     });
   }
 
-  DatabaseManager.registerUser(username, password, email, function(status) {
+  dbm.registerUser(username, password, email, function(status) {
     if (status) {
       request.session.username = username;
       response.json({
@@ -86,7 +89,7 @@ router.post('/login', function(request, response) {
       message: 'You are already logged in.'
     });
   }
-  DatabaseManager.isUserAuthenticated(username, password, function(status) {
+  dbm.isUserAuthenticated(username, password, function(status) {
     if (status) {
       request.session.username = username;
       response.json({
