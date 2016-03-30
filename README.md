@@ -5,4 +5,4 @@
   - captiosus (Roy Xu)
   - omgimanerd (Alvin Lin)
   - bleepbloopsify (Leon Chou)
-  - soviettuna Erik
+  - soviettuna (Erik Zykov)
