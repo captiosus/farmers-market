@@ -47,7 +47,7 @@ router.get('/test', function(request, response){
     console.log(document);
     response.write(JSON.stringify(document)+ "\n");
   });
-  DatabaseManager.updateUser("Leon", {"comments":[{"username":"Leon", "date":"3/29/16","comment":"hahgay"}]}, function(user, message){
+  DatabaseManager.updateUser("Leon", {"reviews":[{"username":"Leon", "date":"3/29/16","comment":"hahgay"}]}, function(user, message){
     if (message){
       response.write(message);
       return;
@@ -62,6 +62,7 @@ router.get('/test', function(request, response){
     console.log(document);
     response.end(JSON.stringify(document)+ "\n");
   });
+});
 router.get('/listings', function(request, response) {
   response.render('listings');
 });
@@ -69,6 +70,7 @@ router.get('/listings', function(request, response) {
 router.get('/register', function(request, response) {
   response.redirect('/');
 });
+
 
 router.post('/register', function(request, response) {
   var username = request.body.username;
