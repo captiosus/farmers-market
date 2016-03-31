@@ -5,7 +5,6 @@
 
 // Dependencies
 var express = require('express');
-
 var DatabaseManager = require('../lib/DatabaseManager');
 
 var dbm = DatabaseManager.create();
@@ -14,7 +13,6 @@ var router = express.Router();
 router.get('/', function(request, response) {
   response.render('index');
 });
-
 router.get('/test', function(request, response){
   if (request.app.locals.dev_mode) {
     response.render('test');
@@ -27,7 +25,8 @@ router.get('/listings', function(request, response) {
   response.render('listings');
 });
 router.get('/listings/:id', function(request, response){
-  D
+  var listingid = request.params.id;
+  
 });
 
 router.get('/register', function(request, response) {

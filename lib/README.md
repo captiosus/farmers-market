@@ -13,7 +13,7 @@
     datemade: DateObject
   ],
   listings:[
-    productId:int
+    listingId:int
   ]
 }
 ```
