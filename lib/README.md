@@ -13,7 +13,7 @@
     datemade: DateObject
   ],
   listings:[
-    productId:int
+    listingId:int
   ]
 }
 ```
@@ -28,5 +28,7 @@
     ...
   ],
   price: float,
+  title: String,
+  description: String,
 }
 ```
