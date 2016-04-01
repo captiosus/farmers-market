@@ -1,5 +1,5 @@
 /**
- * @fileoverview Unit test
+ * @fileoverview Test dump script
  * @author bleepbloopsify@gmail.com (Leon Chou)
  */
 
@@ -8,6 +8,7 @@ var DatabaseManager = require('../lib/DatabaseManager');
 
 var dbm = DatabaseManager.create();
 
-dbm.registerUser("User", "password", "email@email.com", function(status) {
+dbm.registerUser("User", "password", "123 sesame street", "email@email.com",
+    function(status) {
   console.log(status);
 });
