@@ -26,7 +26,7 @@ router.get('/listings', function(request, response) {
 });
 router.get('/listings/:id', function(request, response){
   var listingid = request.params.id;
-  
+
 });
 
 router.get('/register', function(request, response) {
