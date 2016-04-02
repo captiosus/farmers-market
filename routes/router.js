@@ -32,19 +32,27 @@ router.get('/listings/:id', function(request, response){
     }
   });
 });
+
 router.get('/listings', function(request, response){
-  var listings = dbm.getListings();
   response.render('listings');
 });
+
+router.post('/listings', function(request, response){
+});
+
 router.get('/newlisting', function(request, response){
   response.render('newlisting');
 });
-router.post('/newlisting', function(request, response){
 
+router.post('/newlisting', function(request, response){
+  var params = [];
+  response.redirect('/');
 });
+
 router.get('/register', function(request, response) {
   response.render('register');
 });
+
 router.post('/register', function(request, response) {
   var username = request.body.username;
   var password = request.body.password;
