@@ -13,12 +13,13 @@ var router = express.Router();
 router.get('/', function(request, response) {
   response.render('index');
 });
+
 router.get('/test', function(request, response){
   if (request.app.locals.dev_mode) {
     response.render('test');
-    return;
+  } else {
+    response.redirect('/');
   }
-  response.redirect('/');
 });
 
 router.get('/listings', function(request, response) {
@@ -117,14 +118,13 @@ router.post('/logout', function(request, response) {
 router.get('/listings/:id', function(request, response){
   dbm.getListing(request.params.id, function(error, listing){
     assert.equal(null, error);
-    if (!listing) response.render('listing');
-    else{
+    if (!listing) {
+      response.render('listing');
+    } else {
       response.render('listing', {'listing':listing});
     }
   });
 });
-
-
 
 router.get('/listings', function(request, response){
 
