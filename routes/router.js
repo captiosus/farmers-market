@@ -41,9 +41,9 @@ router.get('/newlisting', function(request, response){
 });
 router.post('/newlisting', function(request, response){
 
-})
+});
 router.get('/register', function(request, response) {
-  response.redirect('/');
+  response.render('register');
 });
 router.post('/register', function(request, response) {
   var username = request.body.username;
