@@ -254,7 +254,7 @@ body {
 #listings-container #listings {
   list-style-type: none;
   overflow: scroll;
-  height: 450px;
+  max-height: 450px;
   width: 800px;
   background-color: lightgreen; }
   #listings-container #listings li {
