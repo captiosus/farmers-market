@@ -14,7 +14,8 @@ dbm.createListing('User', {
   'title':"title",
   'username':'User',
   'price':12.50,
-  'description':'!!!!'
+  'description':'!!!!',
+  zipcode: "11229"
 }, function(error, message){
   console.log(message);
 });
@@ -27,6 +28,6 @@ dbm.getListingsByUsername('User', function(error, listings){
 });
 
 
-dbm.getListingsByDistance(11229, 5, function(err, listings){
+dbm.getListings(11229, function(listings){
   console.log(listings);
 });

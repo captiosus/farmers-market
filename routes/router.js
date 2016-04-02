@@ -33,14 +33,17 @@ router.get('/listings/:id', function(request, response){
   });
 });
 router.get('/listings', function(request, response){
-  var listings = dbm.getListings();
-  response.render('listings');
+  var listings;
+  if (!request.query.zipcode) listings = dbm.getListings();
+  else listings = dbm.getListings(request.query.zipcode);
+  response.render('listings', {listings:listings});
 });
 router.get('/newlisting', function(request, response){
   response.render('newlisting');
 });
 router.post('/newlisting', function(request, response){
-
+  var params = [];
+  response.redirect('/');
 })
 router.get('/register', function(request, response) {
   response.redirect('/');
