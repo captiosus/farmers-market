@@ -53,6 +53,10 @@ router.get('/register', function(request, response) {
   response.render('register');
 });
 
+router.get('/profile', function(request,response) {
+  response.render('profile');
+});
+
 router.post('/register', function(request, response) {
   var username = request.body.username;
   var password = request.body.password;
