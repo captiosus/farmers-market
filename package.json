@@ -26,7 +26,8 @@
     "jade": "^1.11.0",
     "merge-stream": "^1.0.0",
     "mongodb": "^2.1.11",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "request": "^2.69.0"
   },
   "devDependencies": {
     "mocha": "^2.4.5"

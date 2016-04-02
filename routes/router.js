@@ -114,4 +114,21 @@ router.post('/logout', function(request, response) {
   response.redirect('/');
 });
 
+router.get('/listings/:id', function(request, response){
+  dbm.getListing(request.params.id, function(error, listing){
+    assert.equal(null, error);
+    if (!listing) response.render('listing');
+    else{
+      response.render('listing', {'listing':listing});
+    }
+  });
+});
+
+
+
+router.get('/listings', function(request, response){
+
+})
+
+
 module.exports = router;

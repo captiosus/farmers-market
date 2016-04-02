@@ -4,7 +4,7 @@
  */
 
 // Dependencies
-var DatabaseManager = require('../lib/DatabaseManager');
+var DatabaseManager = require('./lib/DatabaseManager');
 
 var dbm = DatabaseManager.create();
 
@@ -24,4 +24,9 @@ dbm.getListingsByUsername('User', function(error, listings){
     console.log(doc.title);
   });
   return;
+});
+
+
+dbm.getListingsByDistance(11229, 5, function(err, listings){
+  console.log(listings);
 });
