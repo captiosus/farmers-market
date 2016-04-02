@@ -1,0 +1,159 @@
+body {
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif; }
+
+.button {
+  border: 1px solid black;
+  color: black;
+  width: 110px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none; }
+  .button:focus {
+    outline: none; }
+
+.textbox {
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 0px; }
+  .textbox:focus {
+    outline: none; }
+
+.image-large {
+  height: 200px;
+  width: 200px;
+  background-color: lightblue; }
+
+.image-medium {
+  height: 160px;
+  width: 160px;
+  background-color: lightblue; }
+
+.image-small {
+  height: 80px;
+  width: 80px;
+  background-color: lightblue; }
+
+.title {
+  font-size: 18px;
+  font-weight: bold; }
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 0px 15px 0px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23);
+  margin-bottom: 20px; }
+  .header .logo {
+    text-align: center;
+    flex-grow: 1;
+    padding-left: 140px;
+    font-size: 30px; }
+    .header .logo a {
+      color: black;
+      text-decoration: none; }
+  .header .login {
+    width: 120px;
+    padding-right: 20px; }
+    .header .login a {
+      color: black;
+      text-decoration: none; }
+
+.box, .top .image-gallery, .top .product-info, .bottom .user-reviews {
+  border: 10px solid lightgreen;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23); }
+
+body {
+  background-color: #F5F4F4; }
+
+.top {
+  display: flex;
+  justify-content: center; }
+  .top .image-gallery {
+    margin-right: 40px;
+    padding: 20px 30px 10px 30px;
+    width: 260px; }
+    .top .image-gallery .image-large {
+      margin-left: auto;
+      margin-right: auto; }
+    .top .image-gallery .gallery-list {
+      list-style-type: none;
+      padding: 0px; }
+      .top .image-gallery .gallery-list li {
+        display: inline-block;
+        margin-left: 10px; }
+      .top .image-gallery .gallery-list li:first-child {
+        margin-left: 0px; }
+  .top .product-info {
+    padding: 10px 30px 10px 30px;
+    width: 600px; }
+    .top .product-info .product-name {
+      font-size: 24px;
+      margin-top: 0px;
+      border-bottom: 1px solid lightgray; }
+    .top .product-info .title {
+      font-size: 20px;
+      font-weight: normal;
+      border-bottom: 1px solid lightgray;
+      margin-top: 0px; }
+    .top .product-info .info-container {
+      padding: 0px 20px 0px 20px;
+      display: flex;
+      justify-content: space-between; }
+      .top .product-info .info-container .pricing {
+        flex-grow: 4; }
+      .top .product-info .info-container .user-info {
+        flex-grow: 4; }
+      .top .product-info .info-container .info {
+        padding-left: 20px; }
+      .top .product-info .info-container .filler {
+        flex-grow: 1; }
+    .top .product-info .buy-price {
+      text-align: center;
+      font-size: 18px; }
+      .top .product-info .buy-price #total {
+        font-weight: bold;
+        color: green; }
+      .top .product-info .buy-price #bidprice {
+        width: 25px;
+        height: 25px;
+        padding-left: 3px;
+        font-size: 18px;
+        border: 2px solid lightgreen; }
+        .top .product-info .buy-price #bidprice:focus {
+          outline: none; }
+      .top .product-info .buy-price .button {
+        margin-left: 20px;
+        width: 50px;
+        border: 3px solid lightgreen; }
+
+.bottom .user-reviews {
+  list-style-type: none;
+  padding: 0px 0px 20px 0px;
+  width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px; }
+  .bottom .user-reviews .title-container {
+    padding: 20px 30px 10px 30px; }
+    .bottom .user-reviews .title-container .title {
+      font-size: 24px;
+      font-weight: normal;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      border-bottom: 1px solid lightgray; }
+  .bottom .user-reviews li {
+    padding: 0px 50px 10px 50px; }
+    .bottom .user-reviews li .review {
+      padding: 0px 30px 0px 30px;
+      margin-bottom: 0px; }
+  .bottom .user-reviews .review-header {
+    border-bottom: 1px solid lightgray; }
+
+/*# sourceMappingURL=product.css.map */

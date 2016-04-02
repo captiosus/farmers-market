@@ -34,3 +34,23 @@ var prices = [
 price.noUiSlider.on('update', function( values, handle ) {
 	prices[handle].innerHTML = "$" + parseInt(values[handle]);
 });
+
+var quantity = document.getElementById("quantity");
+
+noUiSlider.create(quantity, {
+	start: [0, 50],
+  step: 1,
+  connect: true,
+	range: {
+		'min': 1,
+		'max': 50
+	}
+});
+
+var quantities = [
+  document.getElementById("quantity-from"),
+  document.getElementById("quantity-to")
+];
+quantity.noUiSlider.on('update', function( values, handle ) {
+	quantities[handle].innerHTML = parseInt(values[handle]);
+});

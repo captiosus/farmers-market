@@ -1,0 +1,118 @@
+@import "style";
+
+body {
+  background-color: #F5F4F4;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  .image-gallery {
+    margin-right: 40px;
+    padding: 20px 30px 10px 30px;
+    width: 260px;
+    @extend .box;
+    .image-large {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gallery-list {
+      list-style-type: none;
+      padding: 0px;
+      li {
+        display: inline-block;
+        margin-left: 10px;
+      }
+      li:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+  .product-info {
+    padding: 10px 30px 10px 30px;
+    width: 600px;
+    @extend .box;
+    .product-name {
+      font-size: 24px;
+      margin-top: 0px;
+      border-bottom: 1px solid lightgray;
+    }
+    .title {
+      font-size: 20px;
+      font-weight: normal;
+      border-bottom: 1px solid lightgray;
+      margin-top: 0px;
+    }
+    .info-container {
+      padding: 0px 20px 0px 20px;
+      display: flex;
+      justify-content: space-between;
+      .pricing {
+        flex-grow: 4;
+      }
+      .user-info {
+        flex-grow: 4;
+      }
+      .info {
+        padding-left: 20px;
+      }
+      .filler {
+        flex-grow: 1;
+      }
+    }
+    .buy-price {
+      text-align: center;
+      font-size: 18px;
+      #total {
+        font-weight: bold;
+        color: green;
+      }
+      #bidprice {
+        width: 25px;
+        height: 25px;
+        padding-left: 3px;
+        font-size: 18px;
+        border: 2px solid lightgreen;
+        &:focus {
+          outline: none;
+        }
+      }
+      .button {
+        margin-left: 20px;
+        width: 50px;
+        border: 3px solid lightgreen;
+      }
+    }
+  }
+}
+.bottom {
+  .user-reviews {
+    @extend .box;
+    list-style-type: none;
+    padding: 0px 0px 20px 0px;
+    width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    .title-container {
+      padding: 20px 30px 10px 30px;
+      .title {
+        font-size: 24px;
+        font-weight: normal;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-bottom: 1px solid lightgray;
+      }
+    }
+    li {
+      padding: 0px 50px 10px 50px;
+      .review {
+        padding: 0px 30px 0px 30px;
+        margin-bottom: 0px;
+      }
+    }
+    .review-header {
+      border-bottom: 1px solid lightgray;
+    }
+  }
+}

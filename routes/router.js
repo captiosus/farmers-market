@@ -22,13 +22,26 @@ router.get('/test', function(request, response){
   }
 });
 
+router.get('/listings/:id', function(request, response){
+  dbm.getListing(request.params.id, function(error, listing){
+    assert.equal(null, error);
+    if (!listing) {
+      response.render('product');
+    } else {
+      response.render('product', {'listing':listing});
+    }
+  });
+});
+router.get('/listings', function(request, response){
+  var listings = dbm.getListings();
+  response.render('listings');
+});
 router.get('/newlisting', function(request, response){
   response.render('newlisting');
 });
 router.post('/newlisting', function(request, response){
 
 })
-
 router.get('/register', function(request, response) {
   response.redirect('/');
 });
@@ -109,23 +122,5 @@ router.post('/logout', function(request, response) {
   request.session.username = null;
   response.redirect('/');
 });
-
-router.get('/listings/:id', function(request, response){
-  dbm.getListing(request.params.id, function(error, listing){
-    assert.equal(null, error);
-    if (!listing) {
-      response.render('listing');
-    } else {
-      response.render('listing', {'listing':listing});
-    }
-  });
-});
-
-router.get('/listings', function(request, response){
-  
-  var listings = dbm.getListings();
-  response.render('listings');
-})
-
 
 module.exports = router;
