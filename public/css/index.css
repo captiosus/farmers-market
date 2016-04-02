@@ -91,7 +91,10 @@ body {
     margin-top: 50px;
     height: 83px; }
     #plant-container #zipcode .button {
-      width: 30px; }
+      width: 30px;
+      background-color: white;
+      line-height: normal;
+      height: 32px; }
   #plant-container #login {
     width: 200px;
     text-align: center;

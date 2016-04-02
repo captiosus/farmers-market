@@ -88,7 +88,7 @@ router.post('/register', function(request, response) {
 });
 
 router.get('/login', function(request, response) {
-  response.redirect('/');
+  response.render('login');
 });
 router.post('/login', function(request, response) {
   var username = request.body.username;
