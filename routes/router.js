@@ -34,10 +34,9 @@ router.get('/listings/:id', function(request, response){
 });
 
 router.get('/listings', function(request, response){
-  var listings;
-  if (!request.query.zipcode) listings = dbm.getListings();
-  else listings = dbm.getListings(request.query.zipcode);
-  response.render('listings', {listings:listings});
+  response.render('listings');
+});
+router.post('/listings', function(request, response){
 });
 
 router.get('/newlisting', function(request, response){
