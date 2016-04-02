@@ -7,6 +7,8 @@
 var DEV_MODE = false;
 var IP = process.env.IP || 'localhost';
 var PORT_NUMBER = process.env.PORT || 5000;
+var API_KEY = process.env.API_KEY || 000;
+
 
 // Sets the DEV_MODE constant during development if we run 'node server --dev'
 process.argv.forEach(function(value, index, array) {
@@ -50,6 +52,8 @@ app.use('/shared',
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/', router);
+
+app.locals.dev_mode = DEV_MODE;
 
 // Starts the server.
 server.listen(PORT_NUMBER, function() {

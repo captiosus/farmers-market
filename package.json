@@ -1,5 +1,5 @@
 {
-  "name": "farmers-market",
+  "name": "NutriTrade",
   "version": "1.0.0",
   "description": "Submission for Dream It Code It Win It 2016",
   "main": "server.js",
@@ -21,9 +21,15 @@
     "bower": "^1.7.7",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
+    "gulp": "^3.9.1",
+    "gulp-gjslint": "^0.1.5",
     "jade": "^1.11.0",
     "merge-stream": "^1.0.0",
     "mongodb": "^2.1.11",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
   }
 }
