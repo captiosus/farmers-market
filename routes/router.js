@@ -22,19 +22,16 @@ router.get('/test', function(request, response){
   }
 });
 
-router.get('/listings', function(request, response) {
-  response.render('listings');
+router.get('/newlisting', function(request, response){
+  response.render('newlisting');
 });
-router.get('/listings/:id', function(request, response){
-  var listingid = request.params.id;
+router.post('/newlisting', function(request, response){
 
-});
+})
 
 router.get('/register', function(request, response) {
   response.redirect('/');
 });
-
-
 router.post('/register', function(request, response) {
   var username = request.body.username;
   var password = request.body.password;
@@ -58,7 +55,6 @@ router.post('/register', function(request, response) {
       message: 'Your password is too short.'
     });
   }
-
   dbm.registerUser(username, password, email, function(status) {
     if (status) {
       request.session.username = username;
@@ -78,7 +74,6 @@ router.post('/register', function(request, response) {
 router.get('/login', function(request, response) {
   response.redirect('/');
 });
-
 router.post('/login', function(request, response) {
   var username = request.body.username;
   var password = request.body.password;
@@ -127,7 +122,9 @@ router.get('/listings/:id', function(request, response){
 });
 
 router.get('/listings', function(request, response){
-
+  
+  var listings = dbm.getListings();
+  response.render('listings');
 })
 
 
