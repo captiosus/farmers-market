@@ -1,5 +1,6 @@
 body {
-  margin: 0px; }
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif; }
 
 .button {
   border: 1px solid black;
@@ -20,6 +21,15 @@ body {
   padding: 0px; }
   .textbox:focus {
     outline: none; }
+
+.image-medium {
+  height: 160px;
+  width: 160px;
+  background-color: lightblue; }
+
+.title {
+  font-size: 18px;
+  font-weight: bold; }
 
 #plant-container {
   margin-left: auto;

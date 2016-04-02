@@ -3,49 +3,194 @@ extends layout.jade
 block head
   title= "Listings"
   link(href='public/css/listings.css', rel='stylesheet')
+  link(href='public/css/nouislider.min.css', rel='stylesheet')
 
 block body
+  .header
+    .logo
+      | Nutritrades
+    .login
+      a(href="#")
+        | Login
+      span 
+        | | 
+      a(href="#")
+        | Register
   #top
     #filter
-      #distance
-        input.textbox(type="text", name="distance") 
-        a.button(href="#")
-          | mi
-      label(for="bid", class="checkbox-label")
-        input(type="checkbox", name="bid")
-        | bid
-      label(for="buy", class="checkbox-label")
-        input(type="checkbox", name="buy")
-        | buy
-      #price
-        label(for="price-from")
-        | $ 
-        input.textbox(type="text", name="price-from")
-        label(for="price-to")
-        |  – $ 
-        input.textbox(type="text", name="price-to")
-      label(for="meetup", class="checkbox-label")
-        input(type="checkbox", name="meetup")
-        | meetup?
-      h4
-        | Produce
-      ul#produce
-        li
+      .filter-container
+        p.title
+          | Distance
+        #distance.range
+        p.distance-text
+          span#distance-read
+          span
+            |  miles
+        p.title
+          | Price
+        input(type="checkbox", name="bid", class="checkbox", id="bid")
         label(for="bid", class="checkbox-label")
-          input(type="checkbox", name="carrot")
-          | carrot
-        li
-        label(for="bid", class="checkbox-label")
-          input(type="checkbox", name="cucumber")
-          | cucumber
-        li
-        label(for="bid", class="checkbox-label")
-          input(type="checkbox", name="apple")
-          | apple
+          | bid
+        input(type="checkbox", name="buy", class="checkbox", id="buy")
+        label(for="buy", class="checkbox-label")
+          | buy
+        #price.range
+        p.distance-text
+          span#price-from
+          span
+            |  – 
+          span#price-to
+        p.title
+          | Produce
+        ul#produce
+          li
+            input(type="checkbox", name="carrot", class="checkbox", id="carrot")
+            label(for="carrot", class="checkbox-label")
+              | carrot
+          li
+            input(type="checkbox", name="cucumber", class="checkbox", id="cucumber")
+            label(for="cucumber", class="checkbox-label")
+              | cucumber
+          li
+            input(type="checkbox", name="apple", class="checkbox", id="apple")
+            label(for="apple", class="checkbox-label")
+              | apple
+          li
+            input(type="checkbox", name="apple", class="checkbox", id="apple")
+            label(for="apple", class="checkbox-label")
+              | apple
+          li
+            input(type="checkbox", name="apple", class="checkbox", id="apple")
+            label(for="apple", class="checkbox-label")
+              | apple
+      .filter-button-container
+        a(id="filter-button" href="#")
+          | Filter
     #listings-container
       #listings
         li
-          
-  #bottom
+          .image-medium
+          .info-container
+            .user-info
+              p.name.title
+                | username
+              p.rating
+                | *****
+              p.zip
+                | 11229
+              .distance.title
+                | 5 mi
+            .produce-info
+              p.produce.title
+                | Apples
+              p.quantity
+                span
+                  | Quantity: 
+                span#quantity
+                  | 5
+              p.bid
+                span
+                  | Bid Price: $
+                span#bid
+                  | 10
+              p.buy
+                span
+                  | Buy Price: $
+                span#buy
+                  | 10
+        li
+          .image-medium
+          .info-container
+            .user-info
+              p.name.title
+                | username
+              p.rating
+                | *****
+              p.zip
+                | 11229
+              .distance.title
+                | 5 mi
+            .produce-info
+              p.produce.title
+                | Apples
+              p.quantity
+                span
+                  | Quantity: 
+                span#quantity
+                  | 5
+              p.bid
+                span
+                  | Bid Price: $
+                span#bid
+                  | 10
+              p.buy
+                span
+                  | Buy Price: $
+                span#buy
+                  | 10
+          li
+            .image-medium
+            .info-container
+              .user-info
+                p.name.title
+                  | username
+                p.rating
+                  | *****
+                p.zip
+                  | 11229
+                .distance.title
+                  | 5 mi
+              .produce-info
+                p.produce.title
+                  | Apples
+                p.quantity
+                  span
+                    | Quantity: 
+                  span#quantity
+                    | 5
+                p.bid
+                  span
+                    | Bid Price: $
+                  span#bid
+                    | 10
+                p.buy
+                  span
+                    | Buy Price: $
+                  span#buy
+                    | 10
+            li
+              .image-medium
+              .info-container
+                .user-info
+                  p.name.title
+                    | username
+                  p.rating
+                    | *****
+                  p.zip
+                    | 11229
+                  .distance.title
+                    | 5 mi
+                .produce-info
+                  p.produce.title
+                    | Apples
+                  p.quantity
+                    span
+                      | Quantity: 
+                    span#quantity
+                      | 5
+                  p.bid
+                    span
+                      | Bid Price: $
+                    span#bid
+                      | 10
+                  p.buy
+                    span
+                      | Buy Price: $
+                    span#buy
+                      | 10
+
+  script(src="public/js/nouislider.min.js")
+  script(src="public/js/listings.js")
+              
     
           

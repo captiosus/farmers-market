@@ -1,5 +1,6 @@
 body {
-  margin: 0px; }
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif; }
 
 .button {
   border: 1px solid black;
@@ -21,21 +22,84 @@ body {
   .textbox:focus {
     outline: none; }
 
+.image-medium {
+  height: 160px;
+  width: 160px;
+  background-color: lightblue; }
+
+.title {
+  font-size: 18px;
+  font-weight: bold; }
+
+body {
+  background-color: #F5F4F4; }
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23);
+  margin-bottom: 20px; }
+  .header .logo {
+    text-align: center;
+    flex-grow: 1;
+    padding-left: 140px;
+    font-size: 30px; }
+  .header .login {
+    width: 120px;
+    padding-right: 20px; }
+    .header .login a {
+      color: black;
+      text-decoration: none; }
+
+#top {
+  display: flex;
+  justify-content: center; }
+
 #filter {
-  width: 300px;
-  padding-left: 30px;
-  padding-top: 30px; }
+  width: 230px;
+  height: 450px;
+  border: 10px solid lightgreen;
+  margin-right: 30px;
+  background-color: white; }
+  #filter .filter-container {
+    height: 370px;
+    padding: 10px 30px 0px 30px;
+    overflow: scroll; }
+  #filter .title {
+    border-bottom: 1px solid lightgray;
+    margin: 10px 0px 10px 0px; }
   #filter #distance {
-    display: flex;
-    justify-content: flex-start; }
-    #filter #distance input {
-      width: 30px; }
-    #filter #distance .button {
-      width: 30px;
-      margin-left: 10px; }
-  #filter .checkbox-label {
-    display: block;
-    margin-top: 20px; }
+    background-color: lightgreen; }
+  #filter .distance-text {
+    text-align: right; }
+  #filter .range {
+    width: 170px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: none;
+    border: none;
+    height: 5px; }
+    #filter .range .noUi-handle {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      left: -7px;
+      top: -5px; }
+      #filter .range .noUi-handle::before {
+        content: none; }
+      #filter .range .noUi-handle::after {
+        content: none; }
+    #filter .range .noUi-background {
+      background-color: lightgray;
+      box-shadow: none; }
+  #filter #price {
+    background-color: lightgray; }
+    #filter #price .noUi-connect {
+      background-color: lightgreen;
+      box-shadow: none; }
   #filter #price {
     margin-top: 20px; }
     #filter #price input {
@@ -43,5 +107,73 @@ body {
   #filter #produce {
     list-style-type: none;
     padding: 0px; }
+    #filter #produce li {
+      margin-bottom: 6px; }
+  #filter .checkbox {
+    opacity: 0;
+    position: absolute; }
+  #filter .checkbox, #filter .checkbox-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer; }
+  #filter .checkbox + .checkbox-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center; }
+  #filter .checkbox:checked + .checkbox-label:before {
+    background: lightgreen;
+    box-shadow: inset 0px 0px 0px 4px #fff; }
+  #filter .filter-button-container {
+    text-align: center;
+    margin-bottom: 10px;
+    border-top: 1px solid lightgray;
+    padding-top: 12px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto; }
+  #filter #filter-button {
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 30px 6px 30px;
+    color: black;
+    background-color: white;
+    border: 5px solid lightgreen; }
+
+#listings-container #listings {
+  list-style-type: none;
+  overflow: scroll;
+  height: 450px;
+  width: 800px;
+  border: 10px solid lightgreen;
+  background-color: lightgreen; }
+  #listings-container #listings li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23); }
+    #listings-container #listings li p {
+      margin: 10px 0px 10px 0px; }
+    #listings-container #listings li .info-container {
+      flex-grow: 1;
+      display: flex; }
+      #listings-container #listings li .info-container .user-info {
+        flex-grow: 1;
+        padding-left: 30px; }
+      #listings-container #listings li .info-container .produce-info {
+        flex-grow: 1;
+        text-align: right;
+        padding-right: 30px; }
+    #listings-container #listings li:last-child {
+      margin-bottom: 0px; }
 
 /*# sourceMappingURL=listings.css.map */
