@@ -9,8 +9,9 @@ block body
   #plant-container
     #logo Farmers Market
     #zipcode
-      input.textbox(type="text", name="zipcode", placeholder="zipcode")
-      a.button(href="#") GO
+      form(action="/listings")
+        input.textbox(type="text", name="zipcode", placeholder="zipcode")
+        button.button(type="submit") GO
     #login
       a.button(href="#") Login
     #register
