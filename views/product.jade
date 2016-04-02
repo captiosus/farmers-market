@@ -1,0 +1,103 @@
+extends layout.jade
+
+block head
+  title= "Product"
+  link(href='../public/css/product.css', rel='stylesheet')
+
+block body
+  .header
+    .logo
+      a(href="/")
+        | Nutritrades
+    .login
+      a(href="#")
+        | Login
+      span 
+        | | 
+      a(href="#")
+        | Register
+  .top
+    .image-gallery
+      .image-large
+      ul.gallery-list
+        li
+          .image-small
+        li
+          .image-small
+        li
+          .image-small
+    .product-info
+      p.product-name
+        | Apples
+      .info-container
+        .user-info
+          p.title
+            | Seller
+          p#user.info
+            | Captiosus
+          p#rating.info
+            | *****
+          p.title
+            | Distance
+          p#zipcode.info
+            | 11229
+          p#distance.info
+            | 5 miles
+        .filler
+        .pricing
+          p.title
+            | Buy
+            p.buy-price
+              span#buyprice
+                | $10 
+              span
+                | x 
+              span#quantity
+                | 5 
+              span
+                | = 
+              span#total
+                | $50
+              a.button(href="#")
+                | Buy
+          p.title
+            | Bid
+            p.buy-price
+              span
+                | $ 
+              input#bidprice(type="text", name="price")
+              span
+                |  x 
+              span#quantity
+                | 5 
+              span
+                | = 
+              span#total
+                | $0
+              a.button(href="#")
+                | Bid
+  .bottom
+    ul.user-reviews
+      .title-container 
+        p.title
+          | User Reviews 
+      li 
+        p.review-header
+          span.reviewer
+            | bleepbloopsify
+          span.rating
+            |  *****
+        p.review
+          | Spit up on light gray carpet instead of adjacent linoleum climb leg unwrap toilet paper and howl uncontrollably for no reason get video posted to internet for chasing red dot so vommit food and eat it again eat and than sleep on your face.
+      li 
+        p.review-header
+          span.reviewer
+            | bleepbloopsify
+          span.rating
+            |  *****
+        p.review
+          | Spit up on light gray carpet instead of adjacent linoleum climb leg unwrap toilet paper and howl uncontrollably for no reason get video posted to internet for chasing red dot so vommit food and eat it again eat and than sleep on your face. 
+          
+  #login
+    
+block endscript
