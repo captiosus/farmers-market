@@ -28,6 +28,10 @@ dbm.getListingsByUsername('User', function(error, listings){
 });
 
 
-dbm.getListings(11229, function(listings){
+dbm.getListings(function(listings){
   console.log(listings);
-});
+}, 11229);
+
+dbm.getListings(function(listings){
+  console.log(listings);
+})
