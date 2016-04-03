@@ -10,7 +10,7 @@
   height: 550px;
   margin-right: 30px;
   @extend .box;
-  @media (max-width: 600px) {
+  @media (max-width: 1100px) {
     display: none;
     width: 100%;
     border: none;
@@ -122,7 +122,7 @@
       text-align: center;
   }
   .checkbox:checked + .checkbox-label:before {
-      background: lightgreen;
+      background: $primary;
       box-shadow: inset 0px 0px 0px 4px #fff;
   }
 }
@@ -138,7 +138,7 @@
     overflow: scroll;
     max-height: 550px;
     width: 800px;
-    background-color: lightgreen;
+    background-color: $primary;
     @media (max-width: 600px) {
       width: 100%;
       background-color: white;
@@ -189,4 +189,12 @@
 .fa-chevron-left {
   opacity: 0;
   display: none;
+}
+.logo {
+  @media (max-width: 1100px) {
+    margin-left: 80px !important;
+  }
+  @media (max-width: 600px) {
+    margin-left: 0px !important;
+  }
 }

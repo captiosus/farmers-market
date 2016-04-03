@@ -9,7 +9,7 @@ block body
     .gap
     .logo
       a(href="/")
-        | Nutritrades
+        .logo-container
     .login
       a(href="#", id="open-login")
         | Login
@@ -31,41 +31,42 @@ block body
           | Register
         
   .submission
-    p.main-title
-      | List Produce
-    p.title
-      | Type of Produce
-    input.input(type="text", name="produce-type", id="produce-type")
-    p.title
-      | Picture Upload
-    form(action="/newlisting", class="dropzone", id="pic-upload" enctype="multipart/form-data")
-      .pic-container
-    p.title
-      | Quantity
-    input.input(type="text", name="quantity", id="quantity")
-    p.title
-      | Pricing
-      .bid
-        .checkbox-container
-          input(type="checkbox", name="bid", class="checkbox", id="bid")
-          label(for="bid", class="checkbox-label")
-            | Bid
-        .price-container
-          label(for="bid-price")
-            | Minimum Bid
-          input.input(type="text", name="bid-price", id="bid-price")
-      .bid
-        .checkbox-container
-          input(type="checkbox", name="buy", class="checkbox", id="buy")
-          label(for="buy", class="checkbox-label")
-            | Buy
-        .price-container
-          label(for="buy-price")
-            | Buy Price
-          input.input(type="text", name="buy-price", id="buy-price")
-    .submit-button-container
-      a(id="submit-button")
-        | Submit
+    form(action="#")
+      p.main-title
+        | List Produce
+      p.title
+        | Type of Produce
+      input.input(type="text", name="produce-type", id="produce-type")
+      p.title
+        | Picture Upload
+      div.dropzone#pic-upload
+        .pic-container
+      p.title
+        | Quantity
+      input.input(type="text", name="quantity", id="quantity")
+      p.title
+        | Pricing
+        .bid
+          .checkbox-container
+            input(type="checkbox", name="bid", class="checkbox", id="bid")
+            label(for="bid", class="checkbox-label")
+              | Bid
+          .price-container
+            label(for="bid-price")
+              | Minimum Bid
+            input.input(type="text", name="bid-price", id="bid-price")
+        .bid
+          .checkbox-container
+            input(type="checkbox", name="buy", class="checkbox", id="buy")
+            label(for="buy", class="checkbox-label")
+              | Buy
+          .price-container
+            label(for="buy-price")
+              | Buy Price
+            input.input(type="text", name="buy-price", id="buy-price")
+      .submit-button-container
+        button(id="submit-button", type="submit")
+          | Submit
     
 block endscript
   script(src="public/bower/jquery/dist/jquery.min.js")

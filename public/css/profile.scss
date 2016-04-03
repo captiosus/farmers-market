@@ -54,7 +54,7 @@ body {
     max-height: 450px;
     width: 600px;
     margin-top: 30px;
-    background-color: lightgreen;
+    background-color: $primary;
 
     @media (max-width: 1300px) {
       margin-left: auto;
@@ -156,7 +156,7 @@ body {
               margin-bottom: 5px;
             }
             .button {
-              border: 3px solid lightgreen;
+              border: 3px solid $primary;
             }
             .status-padding {
               padding-left: 40px;

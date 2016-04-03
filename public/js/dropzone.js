@@ -1769,12 +1769,12 @@
 var message = document.getElementsByClassName("dz-message")
 
 Dropzone.options.picUpload = {
+  url:'/file/post',
   previewsContainer: ".pic-container",
   maxFiles: 4,
   init:function(){
     var thisdropzone = this;
     this.on("maxfilesreached", function() {
-      console.log("hi");
       message[0].innerHTML = "<span>Max Files Reached</span>"
     });
   }

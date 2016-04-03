@@ -69,7 +69,7 @@ body {
     margin-left: 20px;
     width: 40px;
     cursor: pointer; }
-    @media (min-width: 600px) {
+    @media (min-width: 1100px) {
       .header .filter {
         display: none; } }
     .header .filter p {
@@ -117,6 +117,14 @@ body {
       height: 81.2px;
       background-size: contain;
       display: inline-block; }
+      @media (max-width: 450px) {
+        .header .logo .logo-container {
+          width: 200px;
+          height: 54.1px; } }
+      @media (max-width: 350px) {
+        .header .logo .logo-container {
+          width: 150px;
+          height: 40.6px; } }
     @media (max-width: 600px) {
       .header .logo {
         margin-left: 0px; } }
@@ -164,7 +172,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    border: 3px solid lightgreen; }
+    border: 3px solid #31bc75; }
   #login .exit {
     color: black;
     text-decoration: none;
@@ -202,7 +210,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    border: 3px solid lightgreen; }
+    border: 3px solid #31bc75; }
   #register .exit {
     color: black;
     text-decoration: none;
@@ -253,24 +261,62 @@ body {
     text-align: center;
     margin-top: 0px;
     height: 83px; }
+    #plant-container #zipcode form {
+      display: flex;
+      align-items: center; }
     #plant-container #zipcode input {
-      border: 1px solid lightgray; }
+      border: 3px solid green;
+      background-color: #eb9675;
+      color: darkgreen;
+      font-size: 18px;
+      width: 150px; }
+      #plant-container #zipcode input::-webkit-input-placeholder {
+        color: rgba(0, 100, 0, 0.7);
+        font-size: 14px;
+        line-height: 20px; }
+      #plant-container #zipcode input:-moz-placeholder {
+        color: rgba(0, 100, 0, 0.7);
+        font-size: 14px;
+        line-height: 20px; }
+      #plant-container #zipcode input::-moz-placeholder {
+        color: rgba(0, 100, 0, 0.7);
+        font-size: 14px;
+        line-height: 20px; }
+      #plant-container #zipcode input:-ms-input-placeholder {
+        color: rgba(0, 100, 0, 0.7);
+        font-size: 14px;
+        line-height: 20px; }
     #plant-container #zipcode .button {
-      width: 60px;
+      width: 36px;
       margin-left: 10px;
-      background-color: white;
+      background-color: #eb9675;
       line-height: normal;
-      height: 32px;
-      border: 1px solid lightgray; }
+      height: 36px;
+      border: 3px solid green;
+      color: darkgreen;
+      font-weight: bold;
+      font-size: 14px; }
+      #plant-container #zipcode .button:hover {
+        cursor: pointer; }
   #plant-container #login-button {
     width: 200px;
     text-align: center;
-    margin-top: 70px;
-    height: 67px; }
+    margin-top: 65px;
+    height: 67px;
+    font-weight: bold; }
+    #plant-container #login-button .button {
+      background-color: #eb9675;
+      border: 3px solid green;
+      color: darkgreen; }
   #plant-container #register-button {
     width: 150px;
     text-align: center;
-    margin-top: 80px;
-    height: 50px; }
+    margin-top: 77px;
+    height: 50px;
+    font-weight: bold; }
+    #plant-container #register-button .button {
+      background-color: #eb9675;
+      border: 3px solid green;
+      color: darkgreen; }
 
 /*# sourceMappingURL=index.css.map */
