@@ -25,6 +25,8 @@ var http = require('http');
 var morgan = require('morgan');
 var session = require('express-session');
 var mongodb = require('mongodb');
+var busboy = require('connect-busboy');
+var fs = require('fs');
 
 var router = require('./routes/router');
 
@@ -40,6 +42,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+app.use(busboy());
 
 app.use(morgan(':date[web] :method :url :req[header] :remote-addr :status'));
 app.use('/public',
@@ -50,6 +53,34 @@ app.use('/shared',
 // Use request.query for GET request params.
 // Use request.body for POST request params.
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// app.use(function(req, res, next){
+//   if(req.busboy){
+//     req.busboy.on('file', function(fieldname, file, filename, encoding, mimetype){
+//       if(!req.files) req.files = [];
+//       var filepath = __dirname + "/uploads/" + filename;
+//       req.files.push({
+//         fieldname:fieldname,
+//         file:file,
+//         filename:filename,
+//         encoding:encoding,
+//         mimetype:mimetype,
+//         filepath: filepath
+//       });
+//       var fstream = fs.createWriteStream(filepath);
+//       file.pipe(fstream);
+//       fstream.on("close", function(){
+//         console.log("finished file", file);
+//       })
+//     });
+//     req.busboy.on('finish', function(){
+//       console.log("uploaded");
+//       next();
+//     });
+//     req.pipe(req.busboy);
+//   }
+//   next();
+// });
 
 app.use('/', router);
 

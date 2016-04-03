@@ -24,10 +24,8 @@ router.get('/test', function(request, response){
 });
 
 router.get('/listings/:id', function(request, response){
-  console.log(request.params.id);
   dbm.getListing(request.params.id, function(error, listing){
     assert.equal(null, error);
-    console.log(listing);
     if (!listing) {
       response.render('nolisting');
     } else {
@@ -42,7 +40,6 @@ router.get('/listings', function(request, response){
 
 router.post('/listings', function(request, response){
   var zipcode = request.body.zipcode;
-  console.log(zipcode);
   dbm.getListings(function(listings){
     if (!listings){
       response.json({
@@ -63,7 +60,8 @@ router.get('/newlisting', function(request, response){
 });
 
 router.post('/newlisting', function(request, response){
-  console.log(request.body);
+  console.log(request);
+  response.send('?');
 });
 
 router.get('/register', function(request, response) {

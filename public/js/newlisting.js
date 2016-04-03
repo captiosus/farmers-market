@@ -31,21 +31,21 @@ Dropzone.options.picUpload = { // The camelized version of the ID of the form el
       myDropzone.processQueue();
     });
 
+    this.on("sending", function(file, xhr, formData){
+      formData.append('hello','hello');
+      console.log('hello');
+    })
 
     // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
     // of the sending event because uploadMultiple is set to true.
     this.on("sendingmultiple", function(files, xhr, formData) {
       // Gets triggered when the form is actually being sent.
       // Hide the success button or the complete form.
-      console.log(formData);
       console.log(files);
-      console.log(xhr);
-      formData.append('hello','hello');
     });
     this.on("successmultiple", function(files, response) {
       // Gets triggered when the files have successfully been sent.
       // Redirect user or notify of success.
-      console.log(files);
     });
     this.on("errormultiple", function(files, response) {
       // Gets triggered when there was an error sending the files.
