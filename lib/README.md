@@ -6,12 +6,11 @@
   username: String,
   password: String,
   email: String,
-  address: String,
   reviews: [{
     username: String,
     comment: String,
     datemade: DateObject
-  ],
+  }],
   listings:[
     listingId:int,
     ...
