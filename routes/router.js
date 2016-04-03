@@ -42,7 +42,7 @@ router.post('/listings/:id', function(request, response){
       response.json(listing);
     }
   });
-};
+});
 
 router.get('/listings', function(request, response){
   response.render('listings');
