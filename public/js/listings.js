@@ -68,7 +68,10 @@ var updateListingTable= function (){
 		producequantity.append(producespan2);
 		var producebid = $('<p>', {class:'bid'}).html("Bid Price $" + listing.bidprice);
 		var producebuy = $('<p>', {class:'buy'}).html('Buy Price $' + listing.buyprice);
+
+		produceinfo.append(producetitle, producequantity, producebid, producebuy);
 		infocontainer.append(userinfo);
+		infocontainer.append(produceinfo);
 		listinghtml.append(infocontainer);
 		$('#listings').append(listinghtml);
 	}
