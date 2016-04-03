@@ -108,20 +108,22 @@ body {
         color: black;
         text-decoration: none; }
   .header .logo {
-    text-align: center;
     flex-grow: 1;
-    padding-left: 140px;
-    font-size: 30px; }
+    margin-left: 140px;
+    text-align: center; }
+    .header .logo .logo-container {
+      background: url("../img/longlogo.png") no-repeat center center;
+      width: 300px;
+      height: 81.2px;
+      background-size: contain;
+      display: inline-block; }
     @media (max-width: 600px) {
       .header .logo {
-        padding-left: 0px;
-        font-size: 24px; } }
-    .header .logo a {
-      color: black;
-      text-decoration: none; }
+        margin-left: 0px; } }
   .header .login {
     width: 120px;
-    padding-right: 20px; }
+    padding-right: 20px;
+    font-weight: bold; }
     @media (max-width: 600px) {
       .header .login {
         display: none; } }
@@ -130,7 +132,7 @@ body {
       text-decoration: none; }
 
 .box, #login, #register, .top .user-info, .middle .listings-container, .bottom .user-reviews {
-  border: 10px solid lightgreen;
+  border: 10px solid #31bc75;
   background-color: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23); }
 
@@ -211,10 +213,10 @@ body {
     font-size: 20px; }
 
 #cover {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
+  position: fixed;
   top: 0px;
   display: none;
   opacity: 0;

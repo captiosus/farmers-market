@@ -20,17 +20,16 @@ body {
     align-items: center;
   }
   #logo {
-    width: 300px;
-    text-align: center;
-    line-height: 100px;
-    height: 100px;
-    padding-top: 60px;
-    font-size: 30px;
+    width: 250px;
+    height: 67.65px;
+    background: url("../img/longlogo.png") no-repeat center center;
+    background-size: contain;
+    padding-top: 150px;
   }
   #zipcode {
     width: 250px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 0px;
     height: 83px;
     input {
       border: 1px solid lightgray;
