@@ -31,7 +31,7 @@ block body
           | Register
         
   .submission
-    form(action="#")
+    form.dropzone#pic-upload
       p.main-title
         | List Produce
       p.title
@@ -39,8 +39,6 @@ block body
       input.input(type="text", name="produce-type", id="produce-type")
       p.title
         | Picture Upload
-      div.dropzone#pic-upload
-        .pic-container
       p.title
         | Quantity
       input.input(type="text", name="quantity", id="quantity")
@@ -65,7 +63,7 @@ block body
               | Buy Price
             input.input(type="text", name="buy-price", id="buy-price")
       .submit-button-container
-        button(id="submit-button", type="submit")
+        button(id="submit-button", type="button")
           | Submit
     
 block endscript

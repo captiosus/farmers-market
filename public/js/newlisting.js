@@ -1,24 +1,11 @@
-$(document).ready(function(){
-  console.log("hi");
-})
 
-
-
-
-var sendListing = function(){
-  $.ajax({
-    url:"/newlisting",
-    data:{}
-  })
-}
 Dropzone.options.picUpload = { // The camelized version of the ID of the form element
-
   // The configuration we've talked about above
+  url: '/newlisting',
   autoProcessQueue: false,
   uploadMultiple: true,
   parallelUploads: 4,
   maxFiles: 4,
-
   // The setting up of the dropzone
   init: function() {
     var myDropzone = this;
@@ -30,11 +17,6 @@ Dropzone.options.picUpload = { // The camelized version of the ID of the form el
       e.stopPropagation();
       myDropzone.processQueue();
     });
-
-    this.on("sending", function(file, xhr, formData){
-      formData.append('hello','hello');
-      console.log('hello');
-    })
 
     // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
     // of the sending event because uploadMultiple is set to true.

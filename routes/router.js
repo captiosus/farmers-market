@@ -33,6 +33,16 @@ router.get('/listings/:id', function(request, response){
     }
   });
 });
+router.post('/listings/:id', function(request, response){
+  dbm.getListing(request.params.id, function(error, listing){
+    assert.equal(null, error);
+    if (!listing) {
+      response.send(false);
+    } else {
+      response.json(listing);
+    }
+  });
+};
 
 router.get('/listings', function(request, response){
   response.render('listings');
@@ -58,10 +68,10 @@ router.post('/listings', function(request, response){
 router.get('/newlisting', function(request, response){
   response.render('newlisting');
 });
-
 router.post('/newlisting', function(request, response){
-  console.log(request);
-  response.send('?');
+  console.log(request.body);
+  console.log(request.files);
+  response.send(false);
 });
 
 router.get('/register', function(request, response) {
@@ -111,7 +121,7 @@ router.post('/register', function(request, response) {
 });
 
 router.get('/login', function(request, response) {
-  response.render('login');
+  response.redirect('/');
 });
 router.post('/login', function(request, response) {
   var username = request.body.username;
