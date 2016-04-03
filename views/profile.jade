@@ -128,10 +128,11 @@ block body
                   | Buy Price: $
                 span#buy
                   | 10
+    .listings-gap
     .listings-container.bids-container
       .title-container 
         p.title
-          | Current Bids
+          | Pending Transactions
       ul.listings
         li
           .image-medium
@@ -153,7 +154,15 @@ block body
                 span
                   | Highest Bid: $
                 span#highest-bid
-                  | 10      
+                  | 10
+            .status-info
+              p.title
+                | Status
+              .status-padding
+                p.status
+                  | Accepted
+                a.button.message-seller(href="#")
+                  | Message
         li
           .image-medium
           .info-container
@@ -174,7 +183,15 @@ block body
                 span
                   | Highest Bid: $
                 span#highest-bid
-                  | 10   
+                  | 10
+            .status-info
+              p.title
+                | Status
+              .status-padding
+                p.status
+                  | Accepted
+                a.button.message-seller(href="#")
+                  | Message
         li
           .image-medium
           .info-container
@@ -195,8 +212,14 @@ block body
                 span
                   | Highest Bid: $
                 span#highest-bid
-                  | 10            
-                  
+                  | 10 
+            .status-info
+              p.title
+                | Status
+              .status-padding
+                p.status
+                  | Pending         
+            
   .bottom
     .user-reviews
       .title-container 

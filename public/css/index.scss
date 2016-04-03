@@ -1,5 +1,11 @@
 @import "style";
 
+body {
+  background: url("../img/brownstones.png") no-repeat bottom center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
 #plant-container {
   margin-left: auto;
   margin-right: auto;
@@ -26,11 +32,16 @@
     text-align: center;
     margin-top: 50px;
     height: 83px;
+    input {
+      border: 1px solid lightgray;
+    }
     .button {
-      width: 30px;
+      width: 60px;
+      margin-left: 10px;
       background-color: white;
       line-height: normal;
       height: 32px;
+      border: 1px solid lightgray;
     }
   }
   #login-button {
