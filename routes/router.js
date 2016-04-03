@@ -17,7 +17,7 @@ router.get('/', function(request, response) {
 
 router.get('/test', function(request, response){
   if (request.app.locals.dev_mode) {
-    response.render('payment');
+    response.render('message');
   } else {
     response.redirect('/');
   }
