@@ -69,23 +69,20 @@ $('#registerbutton').click(function(){
     data[$(this).attr('name')] = $(this).val()
   })
   if(data['confirm-password'] != data['password']){
-    $('#login ')('Passwords do not match!');
+    $('#login p.error')('Passwords do not match!');
     return;
   }
+  console.log(data);
   $.ajax({
     url:'/register',
     method:'POST',
     data: data,
     success:function(result){
-      console.log('hello');
-      console.log(result);
       if(!result.success){
         $('#register p.error').html(result.message);
+      }else{
+        window.location.href="/profile";
       }
-      window.location.href="/profile";
-    },
-    error:function(err){
-      console.log(err);
     }
   });
 })
