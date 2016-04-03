@@ -16,12 +16,15 @@ block body
       a(href="/")
         .logo-container
     .login
-      a(href="/newlisting") New
+      a(href="#")
+        i.fa.fa-envelope-o
+      span |
+      a(href="/newlisting") New Listing
       span |
       a(href="#", id="open-login")
         | Login
-      span 
-        | | 
+      span
+        | |
       a(href="#", id="open-register")
         | Register
     .hamburger
@@ -30,6 +33,12 @@ block body
       p#hamtext
         | Menu
     ul.menu-list
+      li
+        a(href="#", id="open-login")
+          | Messages
+      li
+        a(href="#", id="open-login")
+          | New Listing
       li
         a(href="#", id="open-login")
           | Login
@@ -60,7 +69,7 @@ block body
         p.distance-text
           span#price-from
           span
-            |  – 
+            |  –
           span#price-to
         p.title
           | Quantity
@@ -68,7 +77,7 @@ block body
         p.distance-text
           span#quantity-from
           span
-            |  – 
+            |  –
           span#quantity-to
         p.title
           | Produce
@@ -93,15 +102,12 @@ block body
             input(type="checkbox", name="apple", class="checkbox", id="apple")
             label(for="apple", class="checkbox-label")
               | apple
-              
+
     #listings-container
       #listings
-        
+
 block endscript
   script(src="public/js/nouislider.min.js")
   script(src="public/bower/five-star-rating/js/dist/rating.min.js")
   script(src="public/bower/jquery/dist/jquery.min.js")
   script(src="public/js/listings.js")
-              
-    
-          

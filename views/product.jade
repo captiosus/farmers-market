@@ -19,10 +19,15 @@ block body
       a(href="/")
         .logo-container
     .login
+      a(href="#")
+        i.fa.fa-envelope-o
+      span |
+      a(href="/newlisting") New Listing
+      span |
       a(href="#", id="open-login")
         | Login
-      span 
-        | | 
+      span
+        | |
       a(href="#", id="open-register")
         | Register
     .hamburger
@@ -31,6 +36,12 @@ block body
       p#hamtext
         | Menu
     ul.menu-list
+      li
+        a(href="#", id="open-login")
+          | Messages
+      li
+        a(href="#", id="open-login")
+          | New Listing
       li
         a(href="#", id="open-login")
           | Login
@@ -67,11 +78,11 @@ block body
             p.buy-price
               span#buyprice #{listing.buyprice}
               span
-                | x 
+                | x
               span#quantity
-                | 5 
+                | 5
               span
-                | = 
+                | =
               span#total
                 | $50
               a.button(href="#")
@@ -80,23 +91,23 @@ block body
             | Bid
             p.buy-price
               span
-                | $ 
+                | $
               span(style="display:none;") #{listing.bidprice}
               input#bidprice(type="text", name="price", placeholder="#{listing.bidprice}")
-              span x 
-              span#quantity 5 
+              span x
+              span#quantity 5
               span
-                | = 
+                | =
               span#total
                 | $0
               a.button(href="#")
                 | Bid
   .bottom
     ul.user-reviews
-      .title-container 
+      .title-container
         p.title
-          | User Reviews 
-      li 
+          | User Reviews
+      li
         p.review-header
           span.reviewer
             | bleepbloopsify
@@ -104,7 +115,7 @@ block body
             |  *****
         p.review
           | Spit up on light gray carpet instead of adjacent linoleum climb leg unwrap toilet paper and howl uncontrollably for no reason get video posted to internet for chasing red dot so vommit food and eat it again eat and than sleep on your face.
-      li 
+      li
         p.review-header
           span.reviewer
             | bleepbloopsify

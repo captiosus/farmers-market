@@ -80,7 +80,7 @@ body {
     margin-right: 20px;
     width: 40px;
     cursor: pointer; }
-    @media (min-width: 600px) {
+    @media (min-width: 601px) {
       .header .hamburger {
         display: none; } }
     .header .hamburger p {
@@ -109,7 +109,7 @@ body {
         text-decoration: none; }
   .header .logo {
     flex-grow: 1;
-    margin-left: 140px;
+    margin-left: 240px;
     text-align: center; }
     .header .logo .logo-container {
       background: url("../img/longlogo.png") no-repeat center center;
@@ -117,7 +117,7 @@ body {
       height: 81.2px;
       background-size: contain;
       display: inline-block; }
-      @media (max-width: 450px) {
+      @media (max-width: 700px) {
         .header .logo .logo-container {
           width: 200px;
           height: 54.1px; } }
@@ -125,16 +125,24 @@ body {
         .header .logo .logo-container {
           width: 150px;
           height: 40.6px; } }
+    @media (max-width: 820px) {
+      .header .logo {
+        margin-left: 200px; } }
     @media (max-width: 600px) {
       .header .logo {
         margin-left: 0px; } }
   .header .login {
-    width: 120px;
+    width: 230px;
     padding-right: 20px;
-    font-weight: bold; }
+    font-weight: bold;
+    text-align: right; }
     @media (max-width: 600px) {
       .header .login {
         display: none; } }
+    @media (max-width: 820px) {
+      .header .login {
+        font-size: 12px;
+        width: 180px; } }
     .header .login a {
       color: black;
       text-decoration: none; }
@@ -300,7 +308,7 @@ body {
     .middle .listings-container .listings {
       list-style-type: none;
       padding: 0;
-      overflow: scroll;
+      overflow-y: auto;
       max-height: 375px; }
       @media (max-width: 600px) {
         .middle .listings-container .listings {
@@ -355,6 +363,8 @@ body {
               border: 3px solid #31bc75; }
             .middle .listings-container .listings li .info-container .status-info .status-padding {
               padding-left: 40px; }
+              .middle .listings-container .listings li .info-container .status-info .status-padding .confirm {
+                margin-left: 30px; }
         .middle .listings-container .listings li:last-child {
           margin-bottom: 0; }
     .middle .listings-container .bids-container {
@@ -384,7 +394,7 @@ body {
       border-bottom: 1px solid lightgray; }
   .bottom .user-reviews ul {
     max-height: 336px;
-    overflow: scroll;
+    overflow-y: auto;
     list-style-type: none;
     margin-top: 0; }
     @media (max-width: 600px) {

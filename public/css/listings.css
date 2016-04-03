@@ -80,7 +80,7 @@ body {
     margin-right: 20px;
     width: 40px;
     cursor: pointer; }
-    @media (min-width: 600px) {
+    @media (min-width: 601px) {
       .header .hamburger {
         display: none; } }
     .header .hamburger p {
@@ -109,7 +109,7 @@ body {
         text-decoration: none; }
   .header .logo {
     flex-grow: 1;
-    margin-left: 140px;
+    margin-left: 240px;
     text-align: center; }
     .header .logo .logo-container {
       background: url("../img/longlogo.png") no-repeat center center;
@@ -117,7 +117,7 @@ body {
       height: 81.2px;
       background-size: contain;
       display: inline-block; }
-      @media (max-width: 450px) {
+      @media (max-width: 700px) {
         .header .logo .logo-container {
           width: 200px;
           height: 54.1px; } }
@@ -125,16 +125,24 @@ body {
         .header .logo .logo-container {
           width: 150px;
           height: 40.6px; } }
+    @media (max-width: 820px) {
+      .header .logo {
+        margin-left: 200px; } }
     @media (max-width: 600px) {
       .header .logo {
         margin-left: 0px; } }
   .header .login {
-    width: 120px;
+    width: 230px;
     padding-right: 20px;
-    font-weight: bold; }
+    font-weight: bold;
+    text-align: right; }
     @media (max-width: 600px) {
       .header .login {
         display: none; } }
+    @media (max-width: 820px) {
+      .header .login {
+        font-size: 12px;
+        width: 180px; } }
     .header .login a {
       color: black;
       text-decoration: none; }
@@ -254,7 +262,7 @@ input:focus {
   #filter .filter-container {
     height: 535px;
     padding: 10px 30px 0px 30px;
-    overflow: scroll; }
+    overflow-y: auto; }
     @media (max-width: 600px) {
       #filter .filter-container {
         height: auto; } }
@@ -342,7 +350,7 @@ input:focus {
     width: 100%; } }
 #listings-container #listings {
   list-style-type: none;
-  overflow: scroll;
+  overflow-y: auto;
   max-height: 550px;
   width: 800px;
   background-color: #31bc75; }
@@ -390,7 +398,10 @@ input:focus {
 
 @media (max-width: 1100px) {
   .logo {
-    margin-left: 80px !important; } }
+    margin-left: 200px !important; } }
+@media (max-width: 820px) {
+  .logo {
+    margin-left: 140px !important; } }
 @media (max-width: 600px) {
   .logo {
     margin-left: 0px !important; } }

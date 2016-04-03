@@ -3,7 +3,7 @@ extends layout.jade
 block head
   title= "Home Screen"
   link(href='public/css/payment.css', rel='stylesheet')
-  
+
 block body
   .header
     .gap
@@ -11,10 +11,15 @@ block body
       a(href="/")
         .logo-container
     .login
+      a(href="#")
+        i.fa.fa-envelope-o
+      span |
+      a(href="/newlisting") New Listing
+      span |
       a(href="#", id="open-login")
         | Login
-      span 
-        | | 
+      span
+        | |
       a(href="#", id="open-register")
         | Register
     .hamburger
@@ -23,6 +28,12 @@ block body
       p#hamtext
         | Menu
     ul.menu-list
+      li
+        a(href="#", id="open-login")
+          | Messages
+      li
+        a(href="#", id="open-login")
+          | New Listing
       li
         a(href="#", id="open-login")
           | Login

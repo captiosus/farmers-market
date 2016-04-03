@@ -90,7 +90,7 @@ body {
     margin-right: 20px;
     width: 40px;
     cursor: pointer;
-    @media (min-width: 600px) {
+    @media (min-width: 601px) {
       display: none;
     }
     p {
@@ -125,7 +125,7 @@ body {
   }
   .logo {
     flex-grow: 1;
-    margin-left: 140px;
+    margin-left: 240px;
     text-align: center;
     .logo-container {
       background: url("../img/longlogo.png") no-repeat center center;
@@ -133,7 +133,7 @@ body {
       height: 81.2px;
       background-size: contain;
       display: inline-block;
-      @media (max-width: 450px) {
+      @media (max-width: 700px) {
         width: 200px;
         height: 54.1px;
       }
@@ -142,16 +142,24 @@ body {
         height: 40.6px;
       }
     }
+    @media (max-width: 820px) {
+      margin-left: 200px;
+    }
     @media (max-width: 600px) {
       margin-left: 0px;
     }
   }
   .login {
-    width: 120px;
+    width: 230px;
     padding-right: 20px;
     font-weight: bold;
+    text-align: right;
     @media (max-width: 600px) {
       display: none;
+    }
+    @media (max-width: 820px) {
+      font-size: 12px;
+      width: 180px;
     }
     a {
       color: black;

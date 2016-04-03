@@ -12,10 +12,15 @@ block body
       a(href="/")
         .logo-container
     .login
+      a(href="#")
+        i.fa.fa-envelope-o
+      span |
+      a(href="/newlisting") New Listing
+      span |
       a(href="#", id="open-login")
         | Login
-      span 
-        | | 
+      span
+        | |
       a(href="#", id="open-register")
         | Register
     .hamburger
@@ -24,6 +29,12 @@ block body
       p#hamtext
         | Menu
     ul.menu-list
+      li
+        a(href="#", id="open-login")
+          | Messages
+      li
+        a(href="#", id="open-login")
+          | New Listing
       li
         a(href="#", id="open-login")
           | Login
@@ -40,7 +51,7 @@ block body
         | 11229
   .middle
     .listings-container
-      .title-container 
+      .title-container
         p.title
           | Current Listings
       ul.listings
@@ -52,7 +63,7 @@ block body
             .produce-info
               p.quantity
                 span
-                  | Quantity: 
+                  | Quantity:
                 span#quantity
                   | 5
               p.bid
@@ -73,7 +84,7 @@ block body
             .produce-info
               p.quantity
                 span
-                  | Quantity: 
+                  | Quantity:
                 span#quantity
                   | 5
               p.bid
@@ -94,7 +105,7 @@ block body
             .produce-info
               p.quantity
                 span
-                  | Quantity: 
+                  | Quantity:
                 span#quantity
                   | 5
               p.bid
@@ -115,7 +126,7 @@ block body
             .produce-info
               p.quantity
                 span
-                  | Quantity: 
+                  | Quantity:
                 span#quantity
                   | 5
               p.bid
@@ -130,7 +141,7 @@ block body
                   | 10
     .listings-gap
     .listings-container.bids-container
-      .title-container 
+      .title-container
         p.title
           | Pending Transactions
       ul.listings
@@ -142,7 +153,7 @@ block body
             .produce-info
               p.quantity
                 span
-                  | Quantity: 
+                  | Quantity:
                 span#quantity
                   | 5
               p.your-bid
@@ -163,6 +174,8 @@ block body
                   | Accepted
                 a.button.message-seller(href="#")
                   | Message
+                a.button.confirm(href="#")
+                  | Confirm
         li
           .image-medium
           .info-container
@@ -171,7 +184,7 @@ block body
             .produce-info
               p.quantity
                 span
-                  | Quantity: 
+                  | Quantity:
                 span#quantity
                   | 5
               p.your-bid
@@ -192,6 +205,8 @@ block body
                   | Accepted
                 a.button.message-seller(href="#")
                   | Message
+                a.button.confirm(href="#")
+                  | Confirm
         li
           .image-medium
           .info-container
@@ -200,7 +215,7 @@ block body
             .produce-info
               p.quantity
                 span
-                  | Quantity: 
+                  | Quantity:
                 span#quantity
                   | 5
               p.your-bid
@@ -212,23 +227,23 @@ block body
                 span
                   | Highest Bid: $
                 span#highest-bid
-                  | 10 
+                  | 10
             .status-info
               p.title
                 | Status
               .status-padding
                 p.status
-                  | Pending         
-            
+                  | Pending
+
   .bottom
     .user-reviews
-      .title-container 
+      .title-container
         p.title
-          | User Reviews 
+          | User Reviews
           span#rating
           | *****
       ul.review-list
-        li 
+        li
           p.review-header
             span.reviewer
               | bleepbloopsify
@@ -236,7 +251,7 @@ block body
               |  *****
           p.review
             | Spit up on light gray carpet instead of adjacent linoleum climb leg unwrap toilet paper and howl uncontrollably for no reason get video posted to internet for chasing red dot so vommit food and eat it again eat and than sleep on your face.
-        li 
+        li
           p.review-header
             span.reviewer
               | bleepbloopsify
@@ -244,7 +259,7 @@ block body
               |  *****
           p.review
             | Spit up on light gray carpet instead of adjacent linoleum climb leg unwrap toilet paper and howl uncontrollably for no reason get video posted to internet for chasing red dot so vommit food and eat it again eat and than sleep on your face.
-        li 
+        li
           p.review-header
             span.reviewer
               | bleepbloopsify
