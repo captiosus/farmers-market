@@ -31,6 +31,9 @@ dbm.getListingsByUsername('User', function(error, listings){
   return;
 });
 
+dbm.getListing('5701453c32f26da0666b9859', function(err, doc){
+  console.log(err, doc);
+});
 
 dbm.getListings(function(listings){
   console.log(listings);

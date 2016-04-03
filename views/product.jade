@@ -1,5 +1,12 @@
 extends layout.jade
 
+block always
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+  link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
+  link(href="../public/css/font-awesome.min.css", rel="stylesheet")
+  meta(charset="utf-8")
+  script(src="../public/bower/jquery/dist/jquery.min.js")
+
 block head
   title= "Product"
   link(href='../public/css/product.css', rel='stylesheet')
@@ -40,29 +47,24 @@ block body
         li
           .image-small
     .product-info
-      p.product-name
-        | Apples
+      p.product-name #{listing.title}
       .info-container
         .user-info
           p.title
             | Seller
-          p#user.info
-            | Captiosus
+          p#user.info #{listing.username}
           p#rating.info
             | *****
           p.title
             | Distance
-          p#zipcode.info
-            | 11229
+          p#zipcode.info #{ listing.zipcode }
           p#distance.info
-            | 5 miles
         .filler
         .pricing
           p.title
             | Buy
             p.buy-price
-              span#buyprice
-                | $10 
+              span#buyprice #{listing.buyprice}
               span
                 | x 
               span#quantity
@@ -78,11 +80,10 @@ block body
             p.buy-price
               span
                 | $ 
-              input#bidprice(type="text", name="price")
-              span
-                |  x 
-              span#quantity
-                | 5 
+              span(style="display:none;") #{listing.bidprice}
+              input#bidprice(type="text", name="price", placeholder="#{listing.bidprice}")
+              span x 
+              span#quantity 5 
               span
                 | = 
               span#total
@@ -113,3 +114,6 @@ block body
           
     
 block endscript
+block alwaysend
+  script(src="../public/js/menu.js")
+  script(src="../public/js/login.js")

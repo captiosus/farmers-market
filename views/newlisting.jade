@@ -38,7 +38,7 @@ block body
     input.input(type="text", name="produce-type", id="produce-type")
     p.title
       | Picture Upload
-    form(action="#", class="dropzone", id="pic-upload")
+    form(action="/newlisting", class="dropzone", id="pic-upload" enctype="multipart/form-data")
       .pic-container
     p.title
       | Quantity
@@ -64,8 +64,10 @@ block body
             | Buy Price
           input.input(type="text", name="buy-price", id="buy-price")
     .submit-button-container
-      a(id="submit-button" href="#")
+      a(id="submit-button")
         | Submit
     
 block endscript
+  script(src="public/bower/jquery/dist/jquery.min.js")
   script(src="public/js/dropzone.js")
+  script(src="public/js/newlisting.js")
