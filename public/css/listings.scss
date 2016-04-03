@@ -42,7 +42,7 @@
     margin: 10px 0px 0px 0px;
   }
   #distance {
-    background-color: lightgreen;
+    background-color: $secondary;
   }
   .distance-text {
     text-align: right;
@@ -75,7 +75,7 @@
   #price {
     background-color: lightgray;
     .noUi-connect {
-      background-color: lightgreen;
+      background-color: $secondary;
       box-shadow: none;
     }
   }
@@ -88,7 +88,7 @@
   #quantity {
     background-color: lightgray;
     .noUi-connect {
-      background-color: lightgreen;
+      background-color: $secondary;
       box-shadow: none;
     }
   }

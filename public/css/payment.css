@@ -225,9 +225,6 @@ body {
 input:focus {
   outline: none; }
 
-body {
-  background-color: #F5F4F4; }
-
 .submission {
   width: 400px;
   margin-left: auto;
@@ -269,28 +266,6 @@ body {
     color: black;
     background-color: white;
     border: 5px solid lightgreen; }
-  .submission .checkbox {
-    opacity: 0;
-    position: absolute; }
-  .submission .checkbox, .submission .checkbox-label {
-    display: block;
-    vertical-align: middle;
-    margin: 5px;
-    cursor: pointer; }
-  .submission .checkbox + .checkbox-label:before {
-    content: '';
-    background: #fff;
-    border: 2px solid #ddd;
-    display: inline-block;
-    vertical-align: middle;
-    width: 15px;
-    height: 15px;
-    padding: 2px;
-    margin-right: 10px;
-    text-align: center; }
-  .submission .checkbox:checked + .checkbox-label:before {
-    background: lightgreen;
-    box-shadow: inset 0px 0px 0px 4px #fff; }
   .submission .input {
     margin-left: 30px;
     height: 20px;
@@ -303,67 +278,18 @@ body {
     @media (max-width: 420px) {
       .submission .input {
         width: 75%; } }
-  .submission .bid {
+  .submission .combined {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 30px; }
-    .submission .bid .checkbox-container {
-      width: 100px; }
-    .submission .bid .price-container {
-      width: 200px; }
+    justify-content: flex-start; }
+    .submission .combined .part {
+      flex-grow: 1; }
+    .submission .combined .input {
+      width: 120px; }
       @media (max-width: 600px) {
-        .submission .bid .price-container {
-          width: 100%; } }
-      .submission .bid .price-container .input {
-        display: block;
-        margin-left: 0px;
-        margin-top: 5px;
-        width: 200px; }
-        @media (max-width: 600px) {
-          .submission .bid .price-container .input {
-            width: 80%; } }
-      .submission .bid .price-container #bid-price {
-        margin-bottom: 10px; }
-  .submission #pic-upload {
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 5px solid lightgreen;
-    text-align: center;
-    font-size: 20px;
-    display: flex;
-    flex-wrap: wrap; }
-    @media (max-width: 600px) {
-      .submission #pic-upload {
-        width: 70%; } }
-    .submission #pic-upload:hover {
-      cursor: pointer; }
-    .submission #pic-upload .dz-message {
-      padding: 50px 20px 50px 20px;
-      order: 1;
-      width: 100%; }
-    .submission #pic-upload .pic-container {
-      order: 2;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap; }
-    .submission #pic-upload .dz-preview {
-      width: 140px;
-      margin: 0px 5px 0px 5px; }
-    .submission #pic-upload .dz-image {
-      position: relative; }
-    .submission #pic-upload .dz-remove {
-      position: absolute;
-      right: 10px;
-      width: 20px;
-      height: 20px;
-      line-height: 20px;
-      border-radius: 20px;
-      border: 1px solid gray;
-      color: gray; }
-  .submission .dz-max-files-reached {
-    pointer-events: none;
-    cursor: default; }
+        .submission .combined .input {
+          width: 65%; } }
+      @media (max-width: 350px) {
+        .submission .combined .input {
+          width: 50%; } }
 
-/*# sourceMappingURL=newlisting.css.map */
+/*# sourceMappingURL=payment.css.map */

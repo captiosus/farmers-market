@@ -1,0 +1,73 @@
+extends layout.jade
+
+block head
+  title= "Home Screen"
+  link(href='public/css/payment.css', rel='stylesheet')
+  
+block body
+  .header
+    .gap
+    .logo
+      a(href="/")
+        | Nutritrades
+    .login
+      a(href="#", id="open-login")
+        | Login
+      span 
+        | | 
+      a(href="#", id="open-register")
+        | Register
+    .hamburger
+      i.fa.fa-bars
+      i.fa.fa-times
+      p#hamtext
+        | Menu
+    ul.menu-list
+      li
+        a(href="#", id="open-login")
+          | Login
+      li
+        a(href="#", id="open-register")
+          | Register
+  .submission
+    p.main-title
+      | Payment Info
+    p.title
+      | Name on Card
+    input.input(type="text", name="produce-type", id="produce-type")
+    p.title
+      | Credit Card Number
+    input.input(type="text", name="quantity", id="quantity")
+    .combined
+      .part
+        p.title
+          | Security Code
+        input.input(type="text", name="quantity", id="quantity")
+      .part
+        p.title
+          | Expiration
+        input.input(type="text", name="quantity", id="quantity")
+    p.title
+      | Address Line 1
+    input.input(type="text", name="quantity", id="quantity")
+    p.title
+      | Address Line 2
+    input.input(type="text", name="quantity", id="quantity")
+    p.title
+      | City
+    input.input(type="text", name="quantity", id="quantity")
+    .combined
+      .part
+        p.title
+          | State
+        input.input(type="text", name="quantity", id="quantity")
+      .part
+        p.title
+          | Zip Code
+        input.input(type="text", name="quantity", id="quantity")
+    .submit-button-container
+      a(id="submit-button" href="#")
+        | Submit
+
+block endscript
+  script(src="public/js/index.js")
