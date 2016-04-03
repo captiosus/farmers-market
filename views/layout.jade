@@ -19,8 +19,8 @@ html(lang="en")
       input(type="text", name="username", id="username")
       label(for="password")
         | Password
-      input(type="text", name="password", id="password")
-      a.button(href="#")
+      input(type="password", name="password", id="password")
+      a.button(id="loginbutton")
         | Login
     #register 
       a.exit(href="#", id="exit-register")
@@ -33,11 +33,11 @@ html(lang="en")
       input(type="text", name="email", id="email")
       label(for="password")
         | Password
-      input(type="text", name="password", id="password")
+      input(type="password", name="password", id="password")
       label(for="confirm-password")
         | Confirm Password
-      input(type="text", name="confirm-password", id="confirm-password")
-      a.button(href="#")
+      input(type="password", name="confirm-password", id="confirm-password")
+      a.button(id="registerbutton")
         | Register
     #cover
   block endscript

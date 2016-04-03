@@ -76,7 +76,6 @@ router.post('/register', function(request, response) {
   var username = request.body.username;
   var password = request.body.password;
   var email = request.body.email;
-
   if (request.session.username) {
     response.json({
       success: false,

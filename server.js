@@ -42,7 +42,6 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
-app.use(busboy());
 
 app.use(morgan(':date[web] :method :url :req[header] :remote-addr :status'));
 app.use('/public',

@@ -42,3 +42,40 @@ $("#exit-register").on("click", function() {
     $("#cover").hide();
   });
 });
+
+$('#loginbutton').click(function(){
+  var data = {};
+  $('#login input').each(function(){
+      data[$(this).attr('name')] = $(this).val
+  },$.ajax({
+    url:'/login',
+    method:'POST',
+    data:data,
+    success:function(result){
+      console.log(result);
+    }
+  }));
+})
+
+$('#registerbutton').click(function(){
+  var data = {};
+  $('#register input').each(function(){
+    data[$(this).attr('name')] = $(this).val()
+  })
+  if(data['confirm-password'] != data['password']){
+    alert('Passwords do not match!');
+    return;
+  }
+  $.ajax({
+    url:'/register',
+    method:'POST',
+    data:data,
+    success:function(result){
+      console.log(result);
+    }
+  });
+})
+
+$('#registerbutton').click(function(){
+
+})
