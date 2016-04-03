@@ -7,6 +7,10 @@ block head
 
 block body
   .header
+    .filter
+      i.fa.fa-filter
+      p
+        | Filter
     .logo
       a(href="/")
         | Nutritrades
@@ -17,6 +21,17 @@ block body
         | | 
       a(href="#")
         | Register
+    .hamburger
+      i.fa.fa-bars
+      p
+        | Menu
+    ul.menu-list
+      li
+        a(href="#")
+          | Login
+      li
+        a(href="#")
+          | Register
   #top
     #filter
       .filter-container
