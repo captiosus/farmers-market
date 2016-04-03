@@ -43,19 +43,19 @@ block body
 
   .submission
     form.dropzone#pic-upload
-      p.main-title
+      p.main-title.order1
         | List Produce
-      p.title
+      p.title.order2
         | Type of Produce
-      input.input(type="text", name="produce-type", id="produce-type")
-      p.title
+      input.order3.input(type="text", name="produce-type", id="produce-type")
+      p.title.order4
         | Picture Upload
-      p.title
+      p.title.order6
         | Quantity
-      input.input(type="text", name="quantity", id="quantity")
-      p.title
+      input.order7.input(type="text", name="quantity", id="quantity")
+      p.title.order8
         | Pricing
-        .bid
+        .bid.order9
           .checkbox-container
             input(type="checkbox", name="bid", class="checkbox", id="bid")
             label(for="bid", class="checkbox-label")
@@ -64,7 +64,7 @@ block body
             label(for="bid-price")
               | Minimum Bid
             input.input(type="text", name="bid-price", id="bid-price")
-        .bid
+        .bid.order10
           .checkbox-container
             input(type="checkbox", name="buy", class="checkbox", id="buy")
             label(for="buy", class="checkbox-label")
@@ -73,7 +73,7 @@ block body
             label(for="buy-price")
               | Buy Price
             input.input(type="text", name="buy-price", id="buy-price")
-      .submit-button-container
+      .submit-button-container.order11
         button(id="submit-button", type="button")
           | Submit
 
