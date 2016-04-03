@@ -23,6 +23,13 @@ router.get('/test', function(request, response){
   }
 });
 
+router.get('/message', function(request, response){
+  if(!request.session.username){
+    response.redirect('/');
+  }
+  response.render('message');
+});
+
 router.get('/listings/:id', function(request, response){
   dbm.getListing(request.params.id, function(error, listing){
     assert.equal(null, error);
@@ -126,7 +133,7 @@ router.get('/login', function(request, response) {
 router.post('/login', function(request, response) {
   var username = request.body.username;
   var password = request.body.password;
-
+  console.log(request.body);
   if (request.session.username) {
     response.json({
       success: false,
