@@ -1,0 +1,222 @@
+extends layout.jade
+
+block head
+  title= "Product"
+  link(href='../public/css/profile.css', rel='stylesheet')
+  script(src="public/bower/jquery/dist/jquery.min.js")
+
+block body
+  .header
+    .logo
+      a(href="/")
+        | Nutritrades
+    .login
+      a(href="#")
+        | Login
+      span 
+        | | 
+      a(href="#")
+        | Register
+  .top
+    .user-info
+      p#user
+        | Captiosus
+      p#email.inner
+        | royxu652@gmail.com
+      p#zipcode.inner
+        | 11229
+    .reviews
+  .middle
+    .listings-container
+      .title-container 
+        p.title
+          | Current Listings
+      ul.listings
+        li
+          .image-medium
+          .info-container
+            p.produce.title
+              | Apples
+            .produce-info
+              p.quantity
+                span
+                  | Quantity: 
+                span#quantity
+                  | 5
+              p.bid
+                span
+                  | Bid Price: $
+                span#bid
+                  | 10
+              p.buy
+                span
+                  | Buy Price: $
+                span#buy
+                  | 10
+        li
+          .image-medium
+          .info-container
+            p.produce.title
+              | Apples
+            .produce-info
+              p.quantity
+                span
+                  | Quantity: 
+                span#quantity
+                  | 5
+              p.bid
+                span
+                  | Bid Price: $
+                span#bid
+                  | 10
+              p.buy
+                span
+                  | Buy Price: $
+                span#buy
+                  | 10
+        li
+          .image-medium
+          .info-container
+            p.produce.title
+              | Apples
+            .produce-info
+              p.quantity
+                span
+                  | Quantity: 
+                span#quantity
+                  | 5
+              p.bid
+                span
+                  | Bid Price: $
+                span#bid
+                  | 10
+              p.buy
+                span
+                  | Buy Price: $
+                span#buy
+                  | 10
+        li
+          .image-medium
+          .info-container
+            p.produce.title
+              | Apples
+            .produce-info
+              p.quantity
+                span
+                  | Quantity: 
+                span#quantity
+                  | 5
+              p.bid
+                span
+                  | Bid Price: $
+                span#bid
+                  | 10
+              p.buy
+                span
+                  | Buy Price: $
+                span#buy
+                  | 10
+    .listings-container.bids-container
+      .title-container 
+        p.title
+          | Current Bids
+      ul.listings
+        li
+          .image-medium
+          .info-container
+            p.produce.title
+              | Apples
+            .produce-info
+              p.quantity
+                span
+                  | Quantity: 
+                span#quantity
+                  | 5
+              p.your-bid
+                span
+                  | Your Bid: $
+                span#your-bid
+                  | 10
+              p.highest-bid
+                span
+                  | Highest Bid: $
+                span#highest-bid
+                  | 10      
+        li
+          .image-medium
+          .info-container
+            p.produce.title
+              | Apples
+            .produce-info
+              p.quantity
+                span
+                  | Quantity: 
+                span#quantity
+                  | 5
+              p.your-bid
+                span
+                  | Your Bid: $
+                span#your-bid
+                  | 10
+              p.highest-bid
+                span
+                  | Highest Bid: $
+                span#highest-bid
+                  | 10   
+        li
+          .image-medium
+          .info-container
+            p.produce.title
+              | Apples
+            .produce-info
+              p.quantity
+                span
+                  | Quantity: 
+                span#quantity
+                  | 5
+              p.your-bid
+                span
+                  | Your Bid: $
+                span#your-bid
+                  | 10
+              p.highest-bid
+                span
+                  | Highest Bid: $
+                span#highest-bid
+                  | 10            
+                  
+  .bottom
+    .user-reviews
+      .title-container 
+        p.title
+          | User Reviews 
+          span#rating
+          | *****
+      ul.review-list
+        li 
+          p.review-header
+            span.reviewer
+              | bleepbloopsify
+            span.rating
+              |  *****
+          p.review
+            | Spit up on light gray carpet instead of adjacent linoleum climb leg unwrap toilet paper and howl uncontrollably for no reason get video posted to internet for chasing red dot so vommit food and eat it again eat and than sleep on your face.
+        li 
+          p.review-header
+            span.reviewer
+              | bleepbloopsify
+            span.rating
+              |  *****
+          p.review
+            | Spit up on light gray carpet instead of adjacent linoleum climb leg unwrap toilet paper and howl uncontrollably for no reason get video posted to internet for chasing red dot so vommit food and eat it again eat and than sleep on your face.
+        li 
+          p.review-header
+            span.reviewer
+              | bleepbloopsify
+            span.rating
+              |  *****
+          p.review
+            | Spit up on light gray carpet instead of adjacent linoleum climb leg unwrap toilet paper and howl uncontrollably for no reason get video posted to internet for chasing red dot so vommit food and eat it again eat and than sleep on your face.
+
+block endscript
+  script(src="public/js/profile.js")
