@@ -1,0 +1,34 @@
+extends layout.jade
+
+block head
+  title= "Product"
+  link(href='../public/css/message.css', rel='stylesheet')
+
+block body
+  .header
+    .gap
+    .logo
+      a(href="/")
+        .logo-container
+    .login
+      a(href="#", id="open-login")
+        | Login
+      span 
+        | | 
+      a(href="#", id="open-register")
+        | Register
+    .hamburger
+      i.fa.fa-bars
+      i.fa.fa-times
+      p#hamtext
+        | Menu
+    ul.menu-list
+      li
+        a(href="#", id="open-login")
+          | Login
+      li
+        a(href="#", id="open-register")
+          | Register
+
+
+block endscript
