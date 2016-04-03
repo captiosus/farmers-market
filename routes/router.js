@@ -37,6 +37,21 @@ router.get('/listings', function(request, response){
   response.render('listings');
 });
 router.post('/listings', function(request, response){
+  var zipcode = request.body.zipcode;
+  console.log(zipcode);
+  dbm.getListings(function(listings){
+    if (!listings){
+      response.json({
+        success:false,
+        message:"No listings found."
+      });
+    }else{
+      response.json({
+        success:true,
+        listings:listings
+      });
+    }
+  }, zipcode);
 });
 
 router.get('/newlisting', function(request, response){
