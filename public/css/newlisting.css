@@ -127,7 +127,7 @@ body {
       color: black;
       text-decoration: none; }
 
-.box, #login, #register, #filter, #listings-container {
+.box, #login, #register, .submission {
   border: 10px solid lightgreen;
   background-color: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23); }
@@ -221,94 +221,59 @@ body {
 input:focus {
   outline: none; }
 
-#top {
-  display: flex;
-  justify-content: center; }
+body {
+  background-color: #F5F4F4; }
 
-#filter {
-  width: 230px;
-  height: 450px;
-  margin-right: 30px; }
+.submission {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  padding: 10px 30px 10px 30px; }
   @media (max-width: 600px) {
-    #filter {
-      display: none;
+    .submission {
       width: 100%;
-      border: none;
-      margin-right: 0px;
-      height: auto;
-      box-shadow: none;
-      opacity: 0;
-      margin-bottom: 20px; } }
-  #filter .filter-container {
-    height: 370px;
-    padding: 10px 30px 0px 30px;
-    overflow: scroll; }
+      padding: 10px 0px 10px 0px;
+      border: none; } }
+  .submission .main-title {
+    font-size: 24px;
+    border-bottom: 1px solid lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px; }
     @media (max-width: 600px) {
-      #filter .filter-container {
-        height: auto; } }
-  #filter .main-title {
-    font-size: 28px;
-    margin: 10px 0px 10px 0px;
+      .submission .main-title {
+        padding-left: 10px; } }
+  .submission .title {
+    margin-left: 20px;
+    margin-right: 20px;
     border-bottom: 1px solid lightgray;
-    padding-left: 30px; }
-    @media (min-width: 600px) {
-      #filter .main-title {
-        display: none; } }
-  #filter .title {
-    border-bottom: 1px solid lightgray;
-    margin: 10px 0px 0px 0px; }
-  #filter #distance {
-    background-color: lightgreen; }
-  #filter .distance-text {
-    text-align: right; }
-  #filter .range {
-    width: 170px;
-    margin-top: 20px;
+    font-weight: normal; }
+  .submission .submit-button-container {
+    text-align: center;
     margin-bottom: 10px;
-    box-shadow: none;
-    border: none;
-    height: 5px; }
-    #filter .range .noUi-handle {
-      width: 15px;
-      height: 15px;
-      border-radius: 15px;
-      left: -7px;
-      top: -5px; }
-      #filter .range .noUi-handle::before {
-        content: none; }
-      #filter .range .noUi-handle::after {
-        content: none; }
-    #filter .range .noUi-background {
-      background-color: lightgray;
-      box-shadow: none; }
-  #filter #price {
-    background-color: lightgray; }
-    #filter #price .noUi-connect {
-      background-color: lightgreen;
-      box-shadow: none; }
-  #filter #price {
-    margin-top: 20px; }
-    #filter #price input {
-      width: 30px; }
-  #filter #quantity {
-    background-color: lightgray; }
-    #filter #quantity .noUi-connect {
-      background-color: lightgreen;
-      box-shadow: none; }
-  #filter #produce {
-    list-style-type: none;
-    padding: 0px; }
-    #filter #produce li {
-      margin-bottom: 6px; }
-  #filter .checkbox {
+    border-top: 1px solid lightgray;
+    padding-top: 12px;
+    margin-top: 30px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto; }
+  .submission #submit-button {
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 30px 6px 30px;
+    color: black;
+    background-color: white;
+    border: 5px solid lightgreen; }
+  .submission .checkbox {
     opacity: 0;
     position: absolute; }
-  #filter .checkbox, #filter .checkbox-label {
-    display: inline-block;
+  .submission .checkbox, .submission .checkbox-label {
+    display: block;
     vertical-align: middle;
     margin: 5px;
     cursor: pointer; }
-  #filter .checkbox + .checkbox-label:before {
+  .submission .checkbox + .checkbox-label:before {
     content: '';
     background: #fff;
     border: 2px solid #ddd;
@@ -319,77 +284,82 @@ input:focus {
     padding: 2px;
     margin-right: 10px;
     text-align: center; }
-  #filter .checkbox:checked + .checkbox-label:before {
+  .submission .checkbox:checked + .checkbox-label:before {
     background: lightgreen;
     box-shadow: inset 0px 0px 0px 4px #fff; }
-  #filter .filter-button-container {
-    text-align: center;
-    margin-bottom: 10px;
-    border-top: 1px solid lightgray;
-    padding-top: 12px;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto; }
-  #filter #filter-button {
-    font-size: 18px;
-    text-decoration: none;
-    display: inline-block;
-    padding: 6px 30px 6px 30px;
-    color: black;
-    background-color: white;
-    border: 5px solid lightgreen; }
-
-@media (max-width: 600px) {
-  #listings-container {
-    border: none;
-    margin-bottom: 20px;
-    width: 100%; } }
-#listings-container #listings {
-  list-style-type: none;
-  overflow: scroll;
-  max-height: 450px;
-  width: 800px;
-  background-color: lightgreen; }
-  @media (max-width: 600px) {
-    #listings-container #listings {
-      width: 100%;
-      background-color: white;
-      max-height: none; } }
-  #listings-container #listings li {
-    margin-bottom: 10px;
+  .submission .input {
+    margin-left: 30px;
+    height: 20px;
+    width: 335px;
+    font-size: 16px;
+    padding: 5px 5px 5px 5px; }
+    @media (max-width: 600px) {
+      .submission .input {
+        width: 85%; } }
+    @media (max-width: 420px) {
+      .submission .input {
+        width: 75%; } }
+  .submission .bid {
     display: flex;
     justify-content: flex-start;
-    background-color: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23); }
-    #listings-container #listings li p {
-      margin: 10px 0px 10px 0px; }
+    align-items: center;
+    margin-left: 30px; }
+    .submission .bid .checkbox-container {
+      width: 100px; }
+    .submission .bid .price-container {
+      width: 200px; }
+      @media (max-width: 600px) {
+        .submission .bid .price-container {
+          width: 100%; } }
+      .submission .bid .price-container .input {
+        display: block;
+        margin-left: 0px;
+        margin-top: 5px;
+        width: 200px; }
+        @media (max-width: 600px) {
+          .submission .bid .price-container .input {
+            width: 80%; } }
+      .submission .bid .price-container #bid-price {
+        margin-bottom: 10px; }
+  .submission #pic-upload {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid lightgreen;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap; }
     @media (max-width: 600px) {
-      #listings-container #listings li .image-medium {
-        height: 80px;
-        width: 80px;
-        margin-top: 30px;
-        margin-left: 10px; } }
-    #listings-container #listings li .info-container {
-      flex-grow: 1;
-      display: flex; }
-      #listings-container #listings li .info-container .user-info {
-        flex-grow: 1;
-        padding-left: 30px; }
-        @media (max-width: 600px) {
-          #listings-container #listings li .info-container .user-info {
-            padding-left: 10px; } }
-      #listings-container #listings li .info-container .produce-info {
-        flex-grow: 1;
-        text-align: right;
-        padding-right: 30px; }
-        @media (max-width: 600px) {
-          #listings-container #listings li .info-container .produce-info {
-            padding-right: 10px; } }
-    #listings-container #listings li:last-child {
-      margin-bottom: 0px; }
+      .submission #pic-upload {
+        width: 70%; } }
+    .submission #pic-upload:hover {
+      cursor: pointer; }
+    .submission #pic-upload .dz-message {
+      padding: 50px 20px 50px 20px;
+      order: 1;
+      width: 100%; }
+    .submission #pic-upload .pic-container {
+      order: 2;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+    .submission #pic-upload .dz-preview {
+      width: 140px;
+      margin: 0px 5px 0px 5px; }
+    .submission #pic-upload .dz-image {
+      position: relative; }
+    .submission #pic-upload .dz-remove {
+      position: absolute;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      border-radius: 20px;
+      border: 1px solid gray;
+      color: gray; }
+  .submission .dz-max-files-reached {
+    pointer-events: none;
+    cursor: default; }
 
-.fa-chevron-left {
-  opacity: 0;
-  display: none; }
-
-/*# sourceMappingURL=listings.css.map */
+/*# sourceMappingURL=newlisting.css.map */

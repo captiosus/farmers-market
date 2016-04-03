@@ -7,18 +7,37 @@ block head
 
 block body
   .header
+    .filter
+      i.fa.fa-chevron-left
+      i.fa.fa-filter
+      p#filtertext
+        | Filter
     .logo
       a(href="/")
         | Nutritrades
     .login
-      a(href="#")
+      a(href="#", id="open-login")
         | Login
       span 
         | | 
-      a(href="#")
+      a(href="#", id="open-register")
         | Register
+    .hamburger
+      i.fa.fa-bars
+      i.fa.fa-times
+      p#hamtext
+        | Menu
+    ul.menu-list
+      li
+        a(href="#", id="open-login")
+          | Login
+      li
+        a(href="#", id="open-register")
+          | Register
   #top
     #filter
+      p.main-title
+        | Filter
       .filter-container
         p.title
           | Distance

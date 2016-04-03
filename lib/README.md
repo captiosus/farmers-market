@@ -27,7 +27,8 @@
     pictureName:String,
     ...
   ],
-  price: float,
+  bidprice: float,
+  buyprice: float,
   title: String,
   description: String,
 }

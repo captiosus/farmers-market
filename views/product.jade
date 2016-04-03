@@ -6,16 +6,29 @@ block head
 
 block body
   .header
+    .gap
     .logo
       a(href="/")
         | Nutritrades
     .login
-      a(href="#")
+      a(href="#", id="open-login")
         | Login
       span 
         | | 
-      a(href="#")
+      a(href="#", id="open-register")
         | Register
+    .hamburger
+      i.fa.fa-bars
+      i.fa.fa-times
+      p#hamtext
+        | Menu
+    ul.menu-list
+      li
+        a(href="#", id="open-login")
+          | Login
+      li
+        a(href="#", id="open-register")
+          | Register
   .top
     .image-gallery
       .image-large
@@ -98,6 +111,5 @@ block body
         p.review
           | Spit up on light gray carpet instead of adjacent linoleum climb leg unwrap toilet paper and howl uncontrollably for no reason get video posted to internet for chasing red dot so vommit food and eat it again eat and than sleep on your face. 
           
-  #login
     
 block endscript

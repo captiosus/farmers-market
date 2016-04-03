@@ -1,0 +1,71 @@
+extends layout.jade
+
+block head
+  title= "Home Screen"
+  link(href='public/css/newlisting.css', rel='stylesheet')
+
+block body
+  .header
+    .gap
+    .logo
+      a(href="/")
+        | Nutritrades
+    .login
+      a(href="#", id="open-login")
+        | Login
+      span 
+        | | 
+      a(href="#", id="open-register")
+        | Register
+    .hamburger
+      i.fa.fa-bars
+      i.fa.fa-times
+      p#hamtext
+        | Menu
+    ul.menu-list
+      li
+        a(href="#", id="open-login")
+          | Login
+      li
+        a(href="#", id="open-register")
+          | Register
+        
+  .submission
+    p.main-title
+      | List Produce
+    p.title
+      | Type of Produce
+    input.input(type="text", name="produce-type", id="produce-type")
+    p.title
+      | Picture Upload
+    form(action="#", class="dropzone", id="pic-upload")
+      .pic-container
+    p.title
+      | Quantity
+    input.input(type="text", name="quantity", id="quantity")
+    p.title
+      | Pricing
+      .bid
+        .checkbox-container
+          input(type="checkbox", name="bid", class="checkbox", id="bid")
+          label(for="bid", class="checkbox-label")
+            | Bid
+        .price-container
+          label(for="bid-price")
+            | Minimum Bid
+          input.input(type="text", name="bid-price", id="bid-price")
+      .bid
+        .checkbox-container
+          input(type="checkbox", name="buy", class="checkbox", id="buy")
+          label(for="buy", class="checkbox-label")
+            | Buy
+        .price-container
+          label(for="buy-price")
+            | Buy Price
+          input.input(type="text", name="buy-price", id="buy-price")
+    .submit-button-container
+      a(id="submit-button" href="#")
+        | Submit
+    
+block endscript
+  script(src="public/js/dropzone.js")

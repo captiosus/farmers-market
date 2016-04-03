@@ -3,12 +3,14 @@ html(lang="en")
   head
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
+    link(href="/public/css/font-awesome.min.css", rel="stylesheet")
+    script(src="public/bower/jquery/dist/jquery.min.js")
     meta(charset="utf-8")
     block head
   body
     block body
     #login
-      a.exit(href="#")
+      a.exit(href="#", id="exit-login")
         | x
       label(for="username")
         | Username
@@ -19,7 +21,7 @@ html(lang="en")
       a.button(href="#")
         | Login
     #register 
-      a.exit(href="#")
+      a.exit(href="#", id="exit-register")
         | x
       label(for="username")
         | Username
@@ -37,3 +39,5 @@ html(lang="en")
         | Register
     #cover
   block endscript
+  script(src="public/js/menu.js")
+  script(src="public/js/login.js")

@@ -13,7 +13,8 @@ dbm.registerUser("Leon", "password", "123 sesame street", "email@email.com");
 dbm.createListing('Leon', {
   'title':"title",
   'username':'Leon',
-  'price':12.50,
+  'buyprice':12.50,
+  bidprice:10,
   'description':'!!!!',
   zipcode: "11229",
   pictures:[

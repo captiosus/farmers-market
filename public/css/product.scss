@@ -7,11 +7,24 @@ body {
 .top {
   display: flex;
   justify-content: center;
+  @media (max-width: 1100px) {
+    display: block;
+  }
   .image-gallery {
     margin-right: 40px;
     padding: 20px 30px 10px 30px;
     width: 260px;
     @extend .box;
+    @media (max-width: 600px) {
+      width: 100%;
+      padding: 20px 0px 10px 0px;
+      border: none;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 1100px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
     .image-large {
       margin-left: auto;
       margin-right: auto;
@@ -19,6 +32,10 @@ body {
     .gallery-list {
       list-style-type: none;
       padding: 0px;
+      @media (max-width: 600px) {
+        display: flex;
+        justify-content: space-around;
+      }
       li {
         display: inline-block;
         margin-left: 10px;
@@ -32,10 +49,26 @@ body {
     padding: 10px 30px 10px 30px;
     width: 600px;
     @extend .box;
+    @media (max-width: 600px) {
+      border: none;
+      padding: 10px 0px 10px 0px;
+      width: 100% !important;
+    }
+    @media (max-width: 700px) {
+      width: 80%;
+    }
+    @media (max-width: 1100px) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+    }
     .product-name {
       font-size: 24px;
       margin-top: 0px;
       border-bottom: 1px solid lightgray;
+      @media (max-width: 600px) {
+        padding-left: 20px;
+      }
     }
     .title {
       font-size: 20px;
@@ -47,6 +80,9 @@ body {
       padding: 0px 20px 0px 20px;
       display: flex;
       justify-content: space-between;
+      @media (max-width: 600px) {
+        display: block;
+      }
       .pricing {
         flex-grow: 4;
       }
@@ -90,18 +126,32 @@ body {
     @extend .box;
     list-style-type: none;
     padding: 0px 0px 20px 0px;
-    width: 1040px;
+    max-width: 1040px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
+    @media (max-width: 600px) {
+      border: none;
+      width: 100% !important;
+    }
+    @media (max-width: 1100px) {
+      width: 80%;
+    }
     .title-container {
       padding: 20px 30px 10px 30px;
+      @media (max-width: 600px) {
+        padding: 20px 0px 10px 0px;
+      }
       .title {
         font-size: 24px;
         font-weight: normal;
         margin-top: 0px;
         margin-bottom: 0px;
         border-bottom: 1px solid lightgray;
+        @media (max-width: 600px) {
+          padding-left: 20px;
+        }
       }
     }
     li {
@@ -109,6 +159,9 @@ body {
       .review {
         padding: 0px 30px 0px 30px;
         margin-bottom: 0px;
+      }
+      @media (max-width: 600px) {
+        padding: 0px 20px 10px 20px;
       }
     }
     .review-header {
