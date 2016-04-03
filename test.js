@@ -8,14 +8,17 @@ var DatabaseManager = require('./lib/DatabaseManager');
 
 var dbm = DatabaseManager.create();
 
-dbm.registerUser("User", "password", "123 sesame street", "email@email.com");
+dbm.registerUser("Leon", "password", "123 sesame street", "email@email.com");
 
-dbm.createListing('User', {
+dbm.createListing('Leon', {
   'title':"title",
-  'username':'User',
+  'username':'Leon',
   'price':12.50,
   'description':'!!!!',
-  zipcode: "11229"
+  zipcode: "11229",
+  pictures:[
+    'public/img/hangingpots.png'
+  ]
 }, function(error, message){
   console.log(message);
 });

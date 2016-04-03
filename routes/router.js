@@ -6,6 +6,7 @@
 // Dependencies
 var express = require('express');
 var DatabaseManager = require('../lib/DatabaseManager');
+var assert = require('assert');
 
 var dbm = DatabaseManager.create();
 var router = express.Router();

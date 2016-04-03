@@ -35,7 +35,34 @@ var generateListings = function(){
 	})
 };
 var updateListingTable= function (){
-	console.log(filter(listings));
+	var filtered = filter(listings);
+	$('#listings').html('');
+	for (var listingkey in filtered){
+		var listinghtml = $('<li>');
+		var listing = filtered[listingkey];
+
+		listinghtml.attr('id', listing._id);
+		var teaser = $('<div>', {class:'image-medium'})
+		if(listing.pictures && listing.pictures[0]){
+			var image = $('<img>', {src:listing.pictures[0]})
+			teaser.append(image);
+			listinghtml.append(teaser);
+		}
+		var infocontainer = $('<div>', {class:'info-container'});
+		var userinfo = $('<div>', {class:'user-info'});
+		var nametitle = $('<p>').addClass('name').addClass('title').html(listing.username);
+		var ratingel = ('<p>', {class:'rating'});
+		var zipel = $('<p>', {class:'zip'}).html(listing.zipcode);
+		var distel = $('<p>', {class:'distance'}).addClass('title').html(listing.distance + ' miles');
+
+		userinfo.append(nametitle);
+		userinfo.append(ratingel);
+		userinfo.append(zipel);
+		userinfo.append(distel);
+		infocontainer.append(userinfo);
+		listinghtml.append(infocontainer);
+		$('#listings').append(listinghtml);
+	}
 }
 var filter = function(unfiltered){
 	var filtered = [];
