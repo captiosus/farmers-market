@@ -24,10 +24,12 @@ router.get('/test', function(request, response){
 });
 
 router.get('/listings/:id', function(request, response){
+  console.log(request.params.id);
   dbm.getListing(request.params.id, function(error, listing){
     assert.equal(null, error);
+    console.log(listing);
     if (!listing) {
-      response.render('product');
+      response.render('nolisting');
     } else {
       response.render('product', {'listing':listing});
     }
@@ -61,8 +63,7 @@ router.get('/newlisting', function(request, response){
 });
 
 router.post('/newlisting', function(request, response){
-  var params = [];
-  response.redirect('/');
+  console.log(request.body);
 });
 
 router.get('/register', function(request, response) {

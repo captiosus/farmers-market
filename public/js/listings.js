@@ -66,13 +66,16 @@ var updateListingTable= function (){
 		var producespan2 = $('<span>', {class:'quantity'}).html(listing.quantity);
 		producequantity.append(producespan1);
 		producequantity.append(producespan2);
-		var producebid = $('<p>', {class:'bid'}).html("Bid Price $" + listing.bidprice);
-		var producebuy = $('<p>', {class:'buy'}).html('Buy Price $' + listing.buyprice);
+		var producebid = listing.bidprice && $('<p>', {class:'bid'}).html("Bid Price $" + listing.bidprice);
+		var producebuy = listing.buyprice && $('<p>', {class:'buy'}).html('Buy Price $' + listing.buyprice);
 
 		produceinfo.append(producetitle, producequantity, producebid, producebuy);
 		infocontainer.append(userinfo);
 		infocontainer.append(produceinfo);
 		listinghtml.append(infocontainer);
+		infocontainer.click( function(){
+			window.location.href = "/listings/" + listing._id + '?distance=' + listing.distance;
+		})
 		$('#listings').append(listinghtml);
 	}
 };
