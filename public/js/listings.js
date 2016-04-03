@@ -9,9 +9,11 @@ var getparams = function(){
 	}
 }
 $(document).ready(function(){
-	getparams();
-	setupFilter();
-	generateListings();
+	setupFilter(function(){
+		getparams();
+		generateListings();
+		$("#filter").click(updateListingTable);
+	});
 })
 
 var listings;
@@ -32,39 +34,45 @@ var generateListings = function(){
 		}
 	})
 };
-var updateListingTable= function ( listings){
+var updateListingTable= function (){
+	console.log(filter(listings));
 }
 var filter = function(unfiltered){
 	var filtered = [];
+	var distancelimit = parseInt(distance.noUiSlider.get());
+	var pricerange = price.noUiSlider.get();
+	var quantitylimit = quantity.noUiSlider.get();
 	for (var listingkey in unfiltered){
+		var condition = true;
 		var listing = unfiltered[listingkey];
-		var distancelimit = parseInt(distance.noUiSlider.get());
-		var pricerange = price.noUiSlider.get();
-		var quantity = quantity.noUiSlider.get();
+		if(listing.price && condition){condition = parseInt(pricerange[0]) <= listing.price && listing.price <= parseInt(pricerange[1]);}
+		if((listing.distance || listing.distance == 0) && condition){condition = listing.distance <= distancelimit;}
+		if(listing.quantity && condition){ condition = parseInt(quantity[0]) <= listing.quantity && listing.quantity <= parseInt(quantity[1])};
+		if (condition){
+			filtered.push(listing);
+		}
 	}
-});
+	return filtered;
+};
 
 
 // NOUISLIDER STUFF GOES BELOW THIS
 var distance, price, quantity;
-var setupFilter = function(){
-	if(windowparams['zipcode']){
-		distance = document.getElementById("distance");
-		noUiSlider.create(distance, {
-			start: 10,
-		  step: 1,
-		  connect: 'lower',
-			range: {
-				'min': 1,
-				'max': 50
-			}
-		});
-		var distanceRead = document.getElementById("distance-read");
+var setupFilter = function(callback){
+	distance = document.getElementById("distance");
+	noUiSlider.create(distance, {
+		start: 10,
+	  step: 1,
+	  connect: 'lower',
+		range: {
+			'min': 1,
+			'max': 50
+		}
+	});
+	var distanceRead = document.getElementById("distance-read");
 		distance.noUiSlider.on('update', function( values, handle ) {
 			distanceRead.innerHTML = parseInt(values[handle]);
-		});
-	}
-
+	});
 	price = document.getElementById("price");
 	noUiSlider.create(price, {
 		start: [1, 100],
@@ -102,4 +110,5 @@ var setupFilter = function(){
 	quantity.noUiSlider.on('update', function( values, handle ) {
 		quantities[handle].innerHTML = parseInt(values[handle]);
 	});
+	callback();
 }
