@@ -27,16 +27,20 @@ router.get('/message', function(request, response){
   if(!request.session.username){
     response.redirect('/');
   }
-  response.render('message');
+  response.render('message', {request:request});
 });
+router.post('/message', function(request, response){
+  // if()
+})
+
 
 router.get('/listings/:id', function(request, response){
   dbm.getListing(request.params.id, function(error, listing){
     assert.equal(null, error);
     if (!listing) {
-      response.render('nolisting');
+      response.render('nolisting', {request:request});
     } else {
-      response.render('product', {'listing':listing});
+      response.render('product', {'listing':listing, request:request});
     }
   });
 });
@@ -52,7 +56,8 @@ router.post('/listings/:id', function(request, response){
 });
 
 router.get('/listings', function(request, response){
-  response.render('listings');
+  console.log(request.session.username);
+  response.render('listings', {request:request});
 });
 
 router.post('/listings', function(request, response){
@@ -86,7 +91,10 @@ router.get('/register', function(request, response) {
 });
 
 router.get('/profile', function(request,response) {
-  response.render('profile');
+  dbm.getListingsByUsername(request.session.username, function(err, listings){
+    if(err){ response.redirect('/'); }
+    response.render('profile', {request:request, listings:listings});
+  })
 });
 
 router.post('/register', function(request, response) {

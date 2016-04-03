@@ -10,6 +10,53 @@ html(lang="en")
       meta(charset="utf-8")
     block head
   body
+    block header
+      .header
+        .filter
+          i.fa.fa-chevron-left
+          i.fa.fa-filter
+          p#filtertext
+            | Filter
+        .logo
+          a(href="/")
+            .logo-container
+        .login
+          a(href="/message")
+            i.fa.fa-envelope-o
+          span |
+          a(href="/newlisting") New Listing
+          span |
+          if request.session.username == undefined
+            a(href="#", id="open-login")
+              | Login
+          else
+            a(href="/profile") #{request.session.username}
+          span
+            | |
+          if request.session.username == undefined
+            a(href="#", id="open-register")
+              | Register
+          else
+            a(href="/logout") Logout
+          
+        .hamburger
+          i.fa.fa-bars
+          i.fa.fa-times
+          p#hamtext
+            | Menu
+        ul.menu-list
+          li
+            a(href="#", id="open-login")
+              | Messages
+          li
+            a(href="#", id="open-login")
+              | New Listing
+          li
+            a(href="#", id="open-login")
+              | Login
+          li
+            a(href="#", id="open-register")
+              | Register
     block body
     #login
       a.exit(href="#", id="exit-login")

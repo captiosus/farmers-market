@@ -54,9 +54,9 @@ $('#loginbutton').click(function(){
     data:data,
     success:function(result){
       if(!result.success){
-        $('#login p.err').html(result.message);
+        $('#login p.error').html(result.message);
       }else{
-        window.location.href = '/';
+        window.location.href = '/profile';
       }
     }
   });
@@ -64,11 +64,12 @@ $('#loginbutton').click(function(){
 
 $('#registerbutton').click(function(){
   var data = {};
+  console.log('hello');
   $('#register input').each(function(){
     data[$(this).attr('name')] = $(this).val()
   })
   if(data['confirm-password'] != data['password']){
-    alert('Passwords do not match!');
+    $('#login ')('Passwords do not match!');
     return;
   }
   $.ajax({
@@ -76,10 +77,12 @@ $('#registerbutton').click(function(){
     method:'POST',
     data: data,
     success:function(result){
+      console.log('hello');
+      console.log(result);
       if(!result.success){
-        $('#register p.err').html(result.message);
+        $('#register p.error').html(result.message);
       }
-      window.location.href="/listings";
+      window.location.href="/profile";
     },
     error:function(err){
       console.log(err);

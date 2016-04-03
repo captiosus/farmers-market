@@ -14,6 +14,12 @@
   listings:[
     listingId:int,
     ...
+  ],
+  messages:[
+    {
+      recipient:String,
+      messages:[String, ...]
+    }
   ]
 }
 ```
