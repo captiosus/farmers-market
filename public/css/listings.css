@@ -23,7 +23,6 @@ body {
 
 .textbox {
   height: 30px;
-  border: 1px solid black;
   text-align: center;
   padding: 0px; }
   .textbox:focus {
@@ -38,6 +37,9 @@ body {
   height: 160px;
   width: 160px;
   background-color: lightblue; }
+  .image-medium img {
+    width: 160px;
+    height: 160px; }
 
 .image-small {
   height: 80px;
@@ -227,7 +229,7 @@ input:focus {
 
 #filter {
   width: 230px;
-  height: 450px;
+  height: 550px;
   margin-right: 30px; }
   @media (max-width: 600px) {
     #filter {
@@ -240,7 +242,7 @@ input:focus {
       opacity: 0;
       margin-bottom: 20px; } }
   #filter .filter-container {
-    height: 370px;
+    height: 535px;
     padding: 10px 30px 0px 30px;
     overflow: scroll; }
     @media (max-width: 600px) {
@@ -322,22 +324,6 @@ input:focus {
   #filter .checkbox:checked + .checkbox-label:before {
     background: lightgreen;
     box-shadow: inset 0px 0px 0px 4px #fff; }
-  #filter .filter-button-container {
-    text-align: center;
-    margin-bottom: 10px;
-    border-top: 1px solid lightgray;
-    padding-top: 12px;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto; }
-  #filter #filter-button {
-    font-size: 18px;
-    text-decoration: none;
-    display: inline-block;
-    padding: 6px 30px 6px 30px;
-    color: black;
-    background-color: white;
-    border: 5px solid lightgreen; }
 
 @media (max-width: 600px) {
   #listings-container {
@@ -347,7 +333,7 @@ input:focus {
 #listings-container #listings {
   list-style-type: none;
   overflow: scroll;
-  max-height: 450px;
+  max-height: 550px;
   width: 800px;
   background-color: lightgreen; }
   @media (max-width: 600px) {

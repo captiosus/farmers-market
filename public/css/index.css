@@ -23,7 +23,6 @@ body {
 
 .textbox {
   height: 30px;
-  border: 1px solid black;
   text-align: center;
   padding: 0px; }
   .textbox:focus {
@@ -38,6 +37,9 @@ body {
   height: 160px;
   width: 160px;
   background-color: lightblue; }
+  .image-medium img {
+    width: 160px;
+    height: 160px; }
 
 .image-small {
   height: 80px;
@@ -221,6 +223,11 @@ body {
 input:focus {
   outline: none; }
 
+body {
+  background: url("../img/brownstones.png") no-repeat bottom center;
+  background-size: cover;
+  min-height: 100vh; }
+
 #plant-container {
   margin-left: auto;
   margin-right: auto;
@@ -245,11 +252,15 @@ input:focus {
     text-align: center;
     margin-top: 50px;
     height: 83px; }
+    #plant-container #zipcode input {
+      border: 1px solid lightgray; }
     #plant-container #zipcode .button {
-      width: 30px;
+      width: 60px;
+      margin-left: 10px;
       background-color: white;
       line-height: normal;
-      height: 32px; }
+      height: 32px;
+      border: 1px solid lightgray; }
   #plant-container #login-button {
     width: 200px;
     text-align: center;

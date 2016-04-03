@@ -23,7 +23,6 @@ body {
 
 .textbox {
   height: 30px;
-  border: 1px solid black;
   text-align: center;
   padding: 0px; }
   .textbox:focus {
@@ -38,6 +37,9 @@ body {
   height: 160px;
   width: 160px;
   background-color: lightblue; }
+  .image-medium img {
+    width: 160px;
+    height: 160px; }
 
 .image-small {
   height: 80px;

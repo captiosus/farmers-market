@@ -23,7 +23,6 @@ body {
 
 .textbox {
   height: 30px;
-  border: 1px solid black;
   text-align: center;
   padding: 0px; }
   .textbox:focus {
@@ -38,6 +37,9 @@ body {
   height: 160px;
   width: 160px;
   background-color: lightblue; }
+  .image-medium img {
+    width: 160px;
+    height: 160px; }
 
 .image-small {
   height: 80px;
@@ -250,16 +252,17 @@ body {
 .middle {
   display: flex;
   justify-content: center; }
-  @media (max-width: 850px) {
+  @media (max-width: 1300px) {
     .middle {
       display: block; } }
+  .middle .listings-gap {
+    width: 50px; }
   .middle .listings-container {
     max-height: 450px;
     width: 600px;
     margin-top: 30px;
-    margin-left: 30px;
     background-color: lightgreen; }
-    @media (max-width: 850px) {
+    @media (max-width: 1300px) {
       .middle .listings-container {
         margin-left: auto;
         margin-right: auto !important;
@@ -311,13 +314,37 @@ body {
           margin: 10px 0; }
         .middle .listings-container .listings li .info-container {
           flex-grow: 1;
-          padding: 0 20px; }
+          padding: 0 20px;
+          display: flex;
+          flex-wrap: wrap; }
+          @media (max-width: 440px) {
+            .middle .listings-container .listings li .info-container {
+              display: block;
+              padding-bottom: 20px; } }
           .middle .listings-container .listings li .info-container .produce {
             padding-left: 10px;
             padding-bottom: 5px;
-            border-bottom: 1px solid lightgray; }
+            border-bottom: 1px solid lightgray;
+            margin-bottom: 0px;
+            width: 100%; }
           .middle .listings-container .listings li .info-container .produce-info {
-            padding-left: 30px; }
+            padding-left: 30px;
+            flex-grow: 1; }
+          .middle .listings-container .listings li .info-container .status-info {
+            flex-grow: 1;
+            padding-right: 20px; }
+            .middle .listings-container .listings li .info-container .status-info .title {
+              border-bottom: 1px solid lightgray;
+              margin-bottom: 0px;
+              margin-top: 5px; }
+            .middle .listings-container .listings li .info-container .status-info .status {
+              padding-left: 20px;
+              margin-top: 5px;
+              margin-bottom: 5px; }
+            .middle .listings-container .listings li .info-container .status-info .button {
+              border: 3px solid lightgreen; }
+            .middle .listings-container .listings li .info-container .status-info .status-padding {
+              padding-left: 40px; }
         .middle .listings-container .listings li:last-child {
           margin-bottom: 0; }
     .middle .listings-container .bids-container {

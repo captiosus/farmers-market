@@ -42,18 +42,21 @@ body {
   display: flex;
   justify-content: center;
 
-  @media (max-width: 850px) {
+  @media (max-width: 1300px) {
     display: block;
+  }
+
+  .listings-gap {
+    width: 50px;
   }
 
   .listings-container {
     max-height: 450px;
     width: 600px;
     margin-top: 30px;
-    margin-left: 30px;
     background-color: lightgreen;
 
-    @media (max-width: 850px) {
+    @media (max-width: 1300px) {
       margin-left: auto;
       margin-right: auto !important;
       width: 80%;
@@ -121,15 +124,43 @@ body {
         .info-container {
           flex-grow: 1;
           padding: 0 20px;
-
+          display: flex;
+          flex-wrap: wrap;
+          @media (max-width: 440px) {
+            display: block;
+            padding-bottom: 20px;
+          }
           .produce {
             padding-left: 10px;
             padding-bottom: 5px;
             border-bottom: 1px solid lightgray;
+            margin-bottom: 0px;
+            width: 100%;
           }
 
           .produce-info {
             padding-left: 30px;
+            flex-grow: 1
+          }
+          .status-info {
+            flex-grow: 1;
+            padding-right: 20px;
+            .title {
+              border-bottom: 1px solid lightgray;
+              margin-bottom: 0px;
+              margin-top: 5px;
+            }
+            .status {
+              padding-left: 20px;
+              margin-top: 5px;
+              margin-bottom: 5px;
+            }
+            .button {
+              border: 3px solid lightgreen;
+            }
+            .status-padding {
+              padding-left: 40px;
+            }
           }
         }
 
