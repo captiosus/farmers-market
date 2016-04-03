@@ -16,7 +16,7 @@ router.get('/', function(request, response) {
 
 router.get('/test', function(request, response){
   if (request.app.locals.dev_mode) {
-    response.render('test');
+    response.render('product');
   } else {
     response.redirect('/');
   }

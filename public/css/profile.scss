@@ -8,113 +8,197 @@ body {
   .user-info {
     @extend .box;
     width: 400px;
-    padding: 20px 50px 10px 50px;
+    padding: 20px 50px 10px;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: 600px) {
+      width: 100%;
+      padding: 20px 0 10px;
+      border: none;
+    }
+
     #user {
       border-bottom: 1px solid lightgray;
       font-size: 22px;
-      margin-top: 0px;
+      margin-top: 0;
+
+      @media (max-width: 600px) {
+        padding-left: 20px;
+      }
     }
+
     .inner {
       padding-left: 10px;
+
+      @media (max-width: 600px) {
+        padding-left: 40px;
+      }
     }
   }
 }
+
 .middle {
   display: flex;
   justify-content: center;
+
+  @media (max-width: 850px) {
+    display: block;
+  }
+
   .listings-container {
     max-height: 450px;
     width: 600px;
     margin-top: 30px;
+    margin-left: 30px;
     background-color: lightgreen;
+
+    @media (max-width: 850px) {
+      margin-left: auto;
+      margin-right: auto !important;
+      width: 80%;
+      max-height: none;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      border: none;
+      background-color: white;
+    }
     @extend .box;
+
     .title-container {
-      padding: 10px 30px 15px 30px;
+      padding: 10px 30px 15px;
       background-color: white;
       box-shadow: 0 1px 2px rgba(0,0,0,0.16), 0 1px 2px rgba(0,0,0,0.23);
+
+      @media (max-width: 600px) {
+        box-shadow: none;
+        padding-bottom: 0;
+      }
+
       .title {
         font-size: 24px;
         font-weight: normal;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
         border-bottom: 1px solid lightgray;
       }
-  }
-  .listings {
-    list-style-type: none;
-    padding: 0px;
-    overflow: scroll;
-    max-height: 375px;
     }
-    li {
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: flex-start;
-      background-color: white;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.16), 0 1px 2px rgba(0,0,0,0.23);
-      .your-bid {
-        font-size: 18px;
-        font-weight: bold;
+
+    .listings {
+      list-style-type: none;
+      padding: 0;
+      overflow: scroll;
+      max-height: 375px;
+      @media (max-width: 600px) {
+        max-height: none;
       }
-      p {
-        margin: 10px 0px 10px 0px;
-      }
-      .info-container {
-        flex-grow: 1;
-        padding: 0px 20px 0px 20px;
-        .produce {
-          padding-left: 10px;
-          padding-bottom: 5px;
-          border-bottom: 1px solid lightgray;
-        }
-        .produce-info {
-          padding-left: 30px;
+      .image-medium {
+        @media (max-width: 600px) {
+          height: 80px;
+          width: 80px;
+          margin-top: 30px;
+          margin-left: 10px;
         }
       }
-      &:last-child {
-        margin-bottom: 0px;
+      li {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-start;
+        background-color: white;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.16), 0 1px 2px rgba(0,0,0,0.23);
+
+        .your-bid {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        p {
+          margin: 10px 0;
+        }
+
+        .info-container {
+          flex-grow: 1;
+          padding: 0 20px;
+
+          .produce {
+            padding-left: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid lightgray;
+          }
+
+          .produce-info {
+            padding-left: 30px;
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
-  }
-  .bids-container {
-    margin-left: 30px;
+
+    .bids-container {
+      margin-right: 30px;
+    }
   }
 }
+
 .bottom {
   .user-reviews {
     @extend .box;
-    padding: 0px 0px 20px 0px;
-    width: 1000px;
+    padding: 0 0 20px;
+    max-width: 1000px;
+    width: 90%;
     max-height: 400px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
     margin-bottom: 40px;
+    @media (max-width: 600px) {
+      width: 100%;
+      border: none;
+      max-height: none;
+    }
+
     .title-container {
-      padding: 20px 30px 0px 30px;
+      padding: 20px 30px 0;
+
       .title {
         font-size: 24px;
         font-weight: normal;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
         border-bottom: 1px solid lightgray;
       }
     }
+
     ul {
       max-height: 336px;
       overflow: scroll;
       list-style-type: none;
-      margin-top: 0px;
-    }
-    li {
-      padding: 0px 50px 10px 50px;
-      .review {
-        padding: 0px 30px 0px 30px;
-        margin-bottom: 0px;
+      margin-top: 0;
+      @media (max-width: 600px) {
+        max-height: none;
       }
     }
+
+    li {
+      padding: 0 50px 10px;
+      @media (max-width: 600px) {
+        padding-left: 10px;
+      }
+      .review {
+        padding: 0 30px;
+        margin-bottom: 0;
+        @media (max-width: 600px) {
+          padding-left: 10px;
+          padding-right: 0px;
+        }
+      }
+    }
+
     .review-header {
       border-bottom: 1px solid lightgray;
     }

@@ -1,6 +1,13 @@
 body {
   margin: 0px;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  background: url("../img/brownstones.png") no-repeat bottom center;
+  background-size: cover;
+  min-height: 100vh; }
+  @media (max-width: 600px) {
+    body {
+      background: none;
+      background-color: #F5F4F4; } }
 
 .button {
   border: 1px solid black;
@@ -47,11 +54,14 @@ body {
   flex-wrap: wrap;
   align-items: center;
   padding: 15px 0px 15px 0px;
-  background-color: white;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23);
   margin-bottom: 20px; }
-  .header .gap {
-    width: 60px; }
+  @media (max-width: 600px) {
+    .header {
+      background-color: white;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23); } }
+  @media (max-width: 600px) {
+    .header .gap {
+      width: 60px; } }
   .header .filter {
     text-align: center;
     margin-left: 20px;
@@ -74,6 +84,9 @@ body {
     .header .hamburger p {
       margin: 0px;
       font-size: 14px; }
+    .header .hamburger .fa-times {
+      display: none;
+      opacity: 0; }
   .header .menu-list {
     list-style-type: none;
     padding: 0px;
@@ -81,7 +94,9 @@ body {
     margin-top: 10px;
     margin-bottom: 0px;
     border-top: 1px solid lightgray;
-    display: none; }
+    display: none;
+    overflow: hidden;
+    height: 0px; }
     .header .menu-list li {
       border-bottom: 1px solid lightgray;
       text-align: center;
@@ -127,8 +142,9 @@ body {
   padding: 30px 50px 30px 50px;
   font-size: 16px;
   position: absolute;
-  z-index: 1;
-  display: none; }
+  z-index: 3;
+  display: none;
+  opacity: 0; }
   #login label {
     display: block;
     margin-bottom: 5px; }
@@ -164,8 +180,9 @@ body {
   padding: 30px 50px 30px 50px;
   font-size: 16px;
   position: absolute;
-  z-index: 1;
-  display: none; }
+  z-index: 3;
+  display: none;
+  opacity: 0; }
   #register label {
     display: block;
     margin-bottom: 5px; }
@@ -197,7 +214,9 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0px;
-  display: none; }
+  display: none;
+  opacity: 0;
+  z-index: 2; }
 
 input:focus {
   outline: none; }
@@ -207,90 +226,145 @@ body {
 
 .top .user-info {
   width: 400px;
-  padding: 20px 50px 10px 50px;
+  padding: 20px 50px 10px;
   margin-left: auto;
   margin-right: auto; }
+  @media (max-width: 600px) {
+    .top .user-info {
+      width: 100%;
+      padding: 20px 0 10px;
+      border: none; } }
   .top .user-info #user {
     border-bottom: 1px solid lightgray;
     font-size: 22px;
-    margin-top: 0px; }
+    margin-top: 0; }
+    @media (max-width: 600px) {
+      .top .user-info #user {
+        padding-left: 20px; } }
   .top .user-info .inner {
     padding-left: 10px; }
+    @media (max-width: 600px) {
+      .top .user-info .inner {
+        padding-left: 40px; } }
 
 .middle {
   display: flex;
   justify-content: center; }
+  @media (max-width: 850px) {
+    .middle {
+      display: block; } }
   .middle .listings-container {
     max-height: 450px;
     width: 600px;
     margin-top: 30px;
+    margin-left: 30px;
     background-color: lightgreen; }
+    @media (max-width: 850px) {
+      .middle .listings-container {
+        margin-left: auto;
+        margin-right: auto !important;
+        width: 80%;
+        max-height: none; } }
+    @media (max-width: 600px) {
+      .middle .listings-container {
+        width: 100%;
+        border: none;
+        background-color: white; } }
     .middle .listings-container .title-container {
-      padding: 10px 30px 15px 30px;
+      padding: 10px 30px 15px;
       background-color: white;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23); }
+      @media (max-width: 600px) {
+        .middle .listings-container .title-container {
+          box-shadow: none;
+          padding-bottom: 0; } }
       .middle .listings-container .title-container .title {
         font-size: 24px;
         font-weight: normal;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
         border-bottom: 1px solid lightgray; }
     .middle .listings-container .listings {
       list-style-type: none;
-      padding: 0px;
+      padding: 0;
       overflow: scroll;
       max-height: 375px; }
-    .middle .listings-container li {
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: flex-start;
-      background-color: white;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23); }
-      .middle .listings-container li .your-bid {
-        font-size: 18px;
-        font-weight: bold; }
-      .middle .listings-container li p {
-        margin: 10px 0px 10px 0px; }
-      .middle .listings-container li .info-container {
-        flex-grow: 1;
-        padding: 0px 20px 0px 20px; }
-        .middle .listings-container li .info-container .produce {
-          padding-left: 10px;
-          padding-bottom: 5px;
-          border-bottom: 1px solid lightgray; }
-        .middle .listings-container li .info-container .produce-info {
-          padding-left: 30px; }
-      .middle .listings-container li:last-child {
-        margin-bottom: 0px; }
-  .middle .bids-container {
-    margin-left: 30px; }
+      @media (max-width: 600px) {
+        .middle .listings-container .listings {
+          max-height: none; } }
+      @media (max-width: 600px) {
+        .middle .listings-container .listings .image-medium {
+          height: 80px;
+          width: 80px;
+          margin-top: 30px;
+          margin-left: 10px; } }
+      .middle .listings-container .listings li {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-start;
+        background-color: white;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23); }
+        .middle .listings-container .listings li .your-bid {
+          font-size: 18px;
+          font-weight: bold; }
+        .middle .listings-container .listings li p {
+          margin: 10px 0; }
+        .middle .listings-container .listings li .info-container {
+          flex-grow: 1;
+          padding: 0 20px; }
+          .middle .listings-container .listings li .info-container .produce {
+            padding-left: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid lightgray; }
+          .middle .listings-container .listings li .info-container .produce-info {
+            padding-left: 30px; }
+        .middle .listings-container .listings li:last-child {
+          margin-bottom: 0; }
+    .middle .listings-container .bids-container {
+      margin-right: 30px; }
 
 .bottom .user-reviews {
-  padding: 0px 0px 20px 0px;
-  width: 1000px;
+  padding: 0 0 20px;
+  max-width: 1000px;
+  width: 90%;
   max-height: 400px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
   margin-bottom: 40px; }
+  @media (max-width: 600px) {
+    .bottom .user-reviews {
+      width: 100%;
+      border: none;
+      max-height: none; } }
   .bottom .user-reviews .title-container {
-    padding: 20px 30px 0px 30px; }
+    padding: 20px 30px 0; }
     .bottom .user-reviews .title-container .title {
       font-size: 24px;
       font-weight: normal;
-      margin-top: 0px;
-      margin-bottom: 0px;
+      margin-top: 0;
+      margin-bottom: 0;
       border-bottom: 1px solid lightgray; }
   .bottom .user-reviews ul {
     max-height: 336px;
     overflow: scroll;
     list-style-type: none;
-    margin-top: 0px; }
+    margin-top: 0; }
+    @media (max-width: 600px) {
+      .bottom .user-reviews ul {
+        max-height: none; } }
   .bottom .user-reviews li {
-    padding: 0px 50px 10px 50px; }
+    padding: 0 50px 10px; }
+    @media (max-width: 600px) {
+      .bottom .user-reviews li {
+        padding-left: 10px; } }
     .bottom .user-reviews li .review {
-      padding: 0px 30px 0px 30px;
-      margin-bottom: 0px; }
+      padding: 0 30px;
+      margin-bottom: 0; }
+      @media (max-width: 600px) {
+        .bottom .user-reviews li .review {
+          padding-left: 10px;
+          padding-right: 0px; } }
   .bottom .user-reviews .review-header {
     border-bottom: 1px solid lightgray; }
 

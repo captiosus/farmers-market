@@ -1,20 +1,20 @@
 // This is to retrieve listings and such
 
-var windowparams = {}
+var windowparams = {};
 var getparams = function(){
 	var pageurlqueryparams = window.location.search.substring(1).split('&');
 	for (var param in pageurlqueryparams){
 		param = pageurlqueryparams[param].split('=');
 		windowparams[param[0]] = param[1];
 	}
-}
+};
 $(document).ready(function(){
 	setupFilter(function(){
 		getparams();
 		generateListings();
 		$("#filter").click(updateListingTable);
 	});
-})
+});
 
 var listings;
 var generateListings = function(){
@@ -32,11 +32,10 @@ var generateListings = function(){
 		complete:function(){
 			updateListingTable(listings);
 		}
-	})
+	});
 };
 var updateListingTable= function (){
-	console.log(filter(listings));
-}
+};
 var filter = function(unfiltered){
 	var filtered = [];
 	var distancelimit = parseInt(distance.noUiSlider.get());
@@ -111,4 +110,62 @@ var setupFilter = function(callback){
 		quantities[handle].innerHTML = parseInt(values[handle]);
 	});
 	callback();
-}
+};
+
+$(".filter").on("click", function(){
+  if ($(".fa-chevron-left").css("display") == "none") {
+    $("#listings-container").animate({
+      opacity: 0
+    }, 400, function(){
+      $("#listings-container").hide();
+      $("#filter").show();
+      $("#filter").animate({
+        opacity: 1
+      }, 400);
+    });
+    $(".fa-filter").animate({
+      opacity: 0
+    }, 400, function(){
+      $(".fa-filter").hide();
+      $(".fa-chevron-left").show();
+      $(".fa-chevron-left").animate({
+        opacity: 1
+      }, 400);
+    });
+    $("#filtertext").animate({
+      opacity: 0
+    }, 400, function(){
+      $("#filtertext").text("Back");
+      $("#filtertext").animate({
+        opacity: 1
+      }, 400);
+    });
+  } else {
+    $("#filter").animate({
+      opacity: 0
+    }, 400, function(){
+      $("#filter").hide();
+      $("#listings-container").show();
+      $("#listings-container").animate({
+        opacity: 1
+      }, 400);
+    });
+    $(".fa-chevron-left").animate({
+      opacity: 0
+    }, 400, function(){
+      $(".fa-chevron-left").hide();
+      $(".fa-filter").show();
+      $(".fa-filter").animate({
+        opacity: 1
+      }, 400);
+    });
+    $("#filtertext").animate({
+      opacity: 0
+    }, 400, function(){
+      $("#filtertext").text("Filter");
+      $("#filtertext").animate({
+        opacity: 1
+      }, 400);
+    });
+  }
+});

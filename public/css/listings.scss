@@ -1,9 +1,5 @@
 @import "style";
 
-body {
-  background-color: #F5F4F4;
-}
-
 #top {
   display: flex;
   justify-content: center;
@@ -16,11 +12,30 @@ body {
   @extend .box;
   @media (max-width: 600px) {
     display: none;
+    width: 100%;
+    border: none;
+    margin-right: 0px;
+    height: auto;
+    box-shadow: none;
+    opacity: 0;
+    margin-bottom: 20px;
   }
   .filter-container {
     height: 370px;
     padding: 10px 30px 0px 30px;
     overflow: scroll;
+    @media (max-width: 600px) {
+      height: auto;
+    }
+  }
+  .main-title {
+    font-size: 28px;
+    margin: 10px 0px 10px 0px;
+    border-bottom: 1px solid lightgray;
+    padding-left: 30px;
+    @media (min-width: 600px) {
+      display: none;
+    }
   }
   .title {
     border-bottom: 1px solid lightgray;
@@ -188,4 +203,8 @@ body {
       }
     }
   }
+}
+.fa-chevron-left {
+  opacity: 0;
+  display: none;
 }

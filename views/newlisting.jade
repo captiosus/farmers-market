@@ -11,22 +11,23 @@ block body
       a(href="/")
         | Nutritrades
     .login
-      a(href="#")
+      a(href="#", id="open-login")
         | Login
       span 
         | | 
-      a(href="#")
+      a(href="#", id="open-register")
         | Register
     .hamburger
       i.fa.fa-bars
-      p
+      i.fa.fa-times
+      p#hamtext
         | Menu
     ul.menu-list
       li
-        a(href="#")
+        a(href="#", id="open-login")
           | Login
       li
-        a(href="#")
+        a(href="#", id="open-register")
           | Register
         
   .submission

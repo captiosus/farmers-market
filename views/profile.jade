@@ -7,16 +7,29 @@ block head
 
 block body
   .header
+    .gap
     .logo
       a(href="/")
         | Nutritrades
     .login
-      a(href="#")
+      a(href="#", id="open-login")
         | Login
       span 
         | | 
-      a(href="#")
+      a(href="#", id="open-register")
         | Register
+    .hamburger
+      i.fa.fa-bars
+      i.fa.fa-times
+      p#hamtext
+        | Menu
+    ul.menu-list
+      li
+        a(href="#", id="open-login")
+          | Login
+      li
+        a(href="#", id="open-register")
+          | Register
   .top
     .user-info
       p#user
@@ -25,7 +38,6 @@ block body
         | royxu652@gmail.com
       p#zipcode.inner
         | 11229
-    .reviews
   .middle
     .listings-container
       .title-container 
