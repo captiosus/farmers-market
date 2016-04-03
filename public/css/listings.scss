@@ -131,7 +131,7 @@ body {
   #listings {
     list-style-type: none;
     overflow: scroll;
-    height: 450px;
+    max-height: 450px;
     width: 800px;
     background-color: lightgreen;
     li {

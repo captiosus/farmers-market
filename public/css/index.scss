@@ -3,20 +3,23 @@
 #plant-container {
   margin-left: auto;
   margin-right: auto;
+  width: 300px;
+  height: 600px;
+  background: url("../img/hangingpots.png") no-repeat top center;
   div {
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
   }
   #logo {
     width: 300px;
     text-align: center;
-    margin-top: 70px;
     line-height: 100px;
     height: 100px;
+    padding-top: 60px;
+    font-size: 30px;
   }
   #zipcode {
     width: 250px;
@@ -30,16 +33,16 @@
       height: 32px;
     }
   }
-  #login {
+  #login-button {
     width: 200px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 70px;
     height: 67px;
   }
-  #register {
+  #register-button {
     width: 150px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 80px;
     height: 50px;
   }
 }

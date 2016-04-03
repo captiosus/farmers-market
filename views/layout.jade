@@ -7,4 +7,33 @@ html(lang="en")
     block head
   body
     block body
+    #login
+      a.exit(href="#")
+        | x
+      label(for="username")
+        | Username
+      input(type="text", name="username", id="username")
+      label(for="password")
+        | Password
+      input(type="text", name="password", id="password")
+      a.button(href="#")
+        | Login
+    #register 
+      a.exit(href="#")
+        | x
+      label(for="username")
+        | Username
+      input(type="email", name="username", id="username")
+      label(for="email")
+        | Email
+      input(type="text", name="email", id="email")
+      label(for="password")
+        | Password
+      input(type="text", name="password", id="password")
+      label(for="confirm-password")
+        | Confirm Password
+      input(type="text", name="confirm-password", id="confirm-password")
+      a.button(href="#")
+        | Register
+    #cover
   block endscript

@@ -36,6 +36,7 @@ router.get('/listings/:id', function(request, response){
 router.get('/listings', function(request, response){
   response.render('listings');
 });
+
 router.post('/listings', function(request, response){
   var zipcode = request.body.zipcode;
   console.log(zipcode);
@@ -61,10 +62,14 @@ router.get('/newlisting', function(request, response){
 router.post('/newlisting', function(request, response){
   var params = [];
   response.redirect('/');
-})
+});
 
 router.get('/register', function(request, response) {
-  response.redirect('/');
+  response.render('register');
+});
+
+router.get('/profile', function(request,response) {
+  response.render('profile');
 });
 
 router.post('/register', function(request, response) {
