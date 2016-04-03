@@ -35,16 +35,65 @@ var generateListings = function(){
 	});
 };
 var updateListingTable= function (){
+	var filtered = filter(listings);
+	$('#listings').html('');
+	for (var listingkey in filtered){
+		var listinghtml = $('<li>');
+		var listing = filtered[listingkey];
+
+		listinghtml.attr('id', listing._id);
+		var teaser = $('<div>', {class:'image-medium'})
+		if(listing.pictures && listing.pictures[0]){
+			var image = $('<img>', {src:listing.pictures[0]})
+			teaser.append(image);
+			listinghtml.append(teaser);
+		}
+		var infocontainer = $('<div>', {class:'info-container'});
+		var userinfo = $('<div>', {class:'user-info'});
+		var nametitle = $('<p>').addClass('name').addClass('title').html(listing.username);
+		var ratingel = ('<p>', {class:'rating'});
+		var zipel = $('<p>', {class:'zip'}).html(listing.zipcode);
+		var distel = $('<p>', {class:'distance'}).addClass('title').html(listing.distance + ' miles');
+		userinfo.append(nametitle);
+		userinfo.append(ratingel);
+		userinfo.append(zipel);
+		userinfo.append(distel);
+
+		var produceinfo = $('<div>', {class:'produce-info'});
+		var producetitle = $('<p>', {class:'produce title'}).html(listing.title);
+		var producequantity = $('<p>', {class:'quantity'});
+		var producespan1 = $('<span>').html("Quantity");
+		var producespan2 = $('<span>', {class:'quantity'}).html(listing.quantity);
+		producequantity.append(producespan1);
+		producequantity.append(producespan2);
+		var producebid = $('<p>', {class:'bid'}).html("Bid Price $" + listing.bidprice);
+		var producebuy = $('<p>', {class:'buy'}).html('Buy Price $' + listing.buyprice);
+
+		produceinfo.append(producetitle, producequantity, producebid, producebuy);
+		infocontainer.append(userinfo);
+		infocontainer.append(produceinfo);
+		listinghtml.append(infocontainer);
+		$('#listings').append(listinghtml);
+	}
 };
+
 var filter = function(unfiltered){
 	var filtered = [];
 	var distancelimit = parseInt(distance.noUiSlider.get());
 	var pricerange = price.noUiSlider.get();
 	var quantitylimit = quantity.noUiSlider.get();
+	var pricechecked = $('input:checked');
+	var pricetypes = []
+	pricechecked.each(function(d, e){
+		pricetypes.push($(e).attr('name'));
+	})
 	for (var listingkey in unfiltered){
 		var condition = true;
 		var listing = unfiltered[listingkey];
-		if(listing.price && condition){condition = parseInt(pricerange[0]) <= listing.price && listing.price <= parseInt(pricerange[1]);}
+		for(var pricetype in pricetypes){
+			pricetype = pricetypes[pricetype];
+			if(listing[pricetype + 'price'] && condition){condition = parseInt(pricerange[0]) <= listing[pricetype + 'price'] && listing[pricetype + 'price'] <= parseInt(pricerange[1]);}
+		}
 		if((listing.distance || listing.distance == 0) && condition){condition = listing.distance <= distancelimit;}
 		if(listing.quantity && condition){ condition = parseInt(quantity[0]) <= listing.quantity && listing.quantity <= parseInt(quantity[1])};
 		if (condition){

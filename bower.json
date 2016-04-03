@@ -20,6 +20,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^2.2.2"
+    "jquery": "^2.2.2",
+    "five-star-rating": "^1.0.0"
   }
 }
