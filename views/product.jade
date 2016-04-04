@@ -14,58 +14,59 @@ block head
 
 block body
   .top
-  .image-large
-    img(src="../public/uploads/#{listing.pictures[0]}")
-  ul.gallery-list
-    each val in listing.pictures
-      li
-        .image-small
-          img(src="../public/uploads/#{val}")
+    .image-gallery
+      .image-large
+        img(src="../public/uploads/#{listing.pictures[0]}")
+      ul.gallery-list
+        each val in listing.pictures
+          li
+            .image-small
+              img(src="../public/uploads/#{val}")
     
-.product-info
-  p.product-name #{listing.title}
-  .info-container
-    .user-info
-      p.title
-        | Seller
-      p#user.info #{listing.username}
-      p#rating.info
-        | *****
-      p.title
-        | Distance
-      p#zipcode.info #{ listing.zipcode }
-      p#distance.info
-    .filler
-    .pricing
-      p.title
-        | Buy
-        p.buy-price
-          span#buyprice #{listing.buyprice}
-          span
-            | x
-          span#quantity
-            | 5
-          span
-            | =
-          span#total
-            | $50
-          a.button(href="#")
+    .product-info
+      p.product-name #{listing.title}
+      .info-container
+        .user-info
+          p.title
+            | Seller
+          p#user.info #{listing.username}
+          p#rating.info
+            | *****
+          p.title
+            | Distance
+          p#zipcode.info #{ listing.zipcode }
+          p#distance.info
+        .filler
+        .pricing
+          p.title
             | Buy
-      p.title
-        | Bid
-        p.buy-price
-          span
-            | $
-          span(style="display:none;") #{listing.bidprice}
-          input#bidprice(type="text", name="price", placeholder="#{listing.bidprice}")
-          span x
-          span#quantity 5
-          span
-            | =
-          span#total
-            | $0
-          a.button(href="#")
+            p.buy-price
+              span#buyprice #{listing.buyprice}
+              span
+                | x
+              span#quantity
+                | 5
+              span
+                | =
+              span#total
+                | $50
+              a.button(href="#")
+                | Buy
+          p.title
             | Bid
+            p.buy-price
+              span
+                | $
+              span(style="display:none;") #{listing.bidprice}
+              input#bidprice(type="text", name="price", placeholder="#{listing.bidprice}")
+              span x
+              span#quantity 5
+              span
+                | =
+              span#total
+                | $0
+              a.button(href="#")
+                | Bid
   .bottom
     ul.user-reviews
       .title-container
