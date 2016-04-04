@@ -41,6 +41,7 @@ body {
       color: darkgreen;
       font-size: 18px;
       width: 150px;
+      font-family: Open Sans;
       &::-webkit-input-placeholder {
         color: transparentize(darkgreen, 0.3);
         font-size: 14px;
@@ -72,6 +73,7 @@ body {
       color: darkgreen;
       font-weight: bold;
       font-size: 14px;
+      font-family: Open Sans;
       &:hover {
         cursor: pointer;
       }

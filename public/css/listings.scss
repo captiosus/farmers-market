@@ -23,7 +23,7 @@
   .filter-container {
     height: 535px;
     padding: 10px 30px 0px 30px;
-    overflow: scroll;
+    overflow-y: auto;
     @media (max-width: 600px) {
       height: auto;
     }
@@ -135,7 +135,7 @@
   }
   #listings {
     list-style-type: none;
-    overflow: scroll;
+    overflow-y: auto;
     max-height: 550px;
     width: 800px;
     background-color: $primary;
@@ -192,7 +192,10 @@
 }
 .logo {
   @media (max-width: 1100px) {
-    margin-left: 80px !important;
+    margin-left: 200px !important;
+  }
+  @media (max-width: 820px) {
+    margin-left: 140px !important;
   }
   @media (max-width: 600px) {
     margin-left: 0px !important;

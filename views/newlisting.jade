@@ -11,10 +11,15 @@ block body
       a(href="/")
         .logo-container
     .login
+      a(href="#")
+        i.fa.fa-envelope-o
+      span |
+      a(href="/newlisting") New Listing
+      span |
       a(href="#", id="open-login")
         | Login
-      span 
-        | | 
+      span
+        | |
       a(href="#", id="open-register")
         | Register
     .hamburger
@@ -25,11 +30,17 @@ block body
     ul.menu-list
       li
         a(href="#", id="open-login")
+          | Messages
+      li
+        a(href="#", id="open-login")
+          | New Listing
+      li
+        a(href="#", id="open-login")
           | Login
       li
         a(href="#", id="open-register")
           | Register
-        
+
   .submission
     form(action="#")
       p.main-title
@@ -67,7 +78,7 @@ block body
       .submit-button-container
         button(id="submit-button", type="submit")
           | Submit
-    
+
 block endscript
   script(src="public/bower/jquery/dist/jquery.min.js")
   script(src="public/js/dropzone.js")

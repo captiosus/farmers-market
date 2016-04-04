@@ -11,10 +11,15 @@ block body
       a(href="/")
         .logo-container
     .login
+      a(href="#")
+        i.fa.fa-envelope-o
+      span |
+      a(href="/newlisting") New Listing
+      span |
       a(href="#", id="open-login")
         | Login
-      span 
-        | | 
+      span
+        | |
       a(href="#", id="open-register")
         | Register
     .hamburger
@@ -25,10 +30,54 @@ block body
     ul.menu-list
       li
         a(href="#", id="open-login")
+          | Messages
+      li
+        a(href="#", id="open-login")
+          | New Listing
+      li
+        a(href="#", id="open-login")
           | Login
       li
         a(href="#", id="open-register")
           | Register
 
-
+  .middle
+    .messages-container
+      .title-container
+        p.title
+          | Messages
+      ul.messages
+        li
+          p.name
+            | captiosus
+          ul.message-list#list-1
+            li
+              | bleepbloopsify: Hey, where can I pick up the apples?
+          p.last-message
+            | Captiosus: Let's meet up at the park at 11.
+          form#form-1
+            input(type="text")
+            button(type="submit")
+              | Send
+          .expand
+            a.expand-click(href="#")#expand-1
+              | Click To Expand
+              i.fa.fa-chevron-down
+        li
+          p.name
+            | captiosus
+          ul.message-list#list-2
+            li
+              | bleepbloopsify: Hey, where can I pick up the apples?
+          p.last-message
+            | Captiosus: Let's meet up at the park at 11.
+          form#form-2
+            input(type="text")
+            button(type="submit")
+              | Send
+          .expand
+            a.expand-click(href="#")#expand-2
+              | Click To Expand
+              i.fa.fa-chevron-down
 block endscript
+  script(src="public/js/message.js")
