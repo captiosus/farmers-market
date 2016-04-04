@@ -6,7 +6,7 @@ html(lang="en")
       link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
       link(href="/public/css/font-awesome.min.css", rel="stylesheet")
       link(rel="icon", type="image/png", href="public/img/nutritradeslogo.png")
-      script(src="public/bower/jquery/dist/jquery.min.js")
+      link(href="public/bower/five-star-rating/css/rating.min.css" rel="stylesheet")
       meta(charset="utf-8")
     block head
   body
@@ -91,7 +91,8 @@ html(lang="en")
       a.button(id="registerbutton")
         | Register
     #cover
+    block alwaysend
+      script(src="public/js/menu.js")
+      script(src="public/js/login.js")
+      script(src="public/bower/five-star-rating/js/dist/rating.min.js")
   block endscript
-  block alwaysend
-    script(src="public/js/menu.js")
-    script(src="public/js/login.js")

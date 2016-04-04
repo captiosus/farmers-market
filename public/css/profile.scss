@@ -142,9 +142,16 @@ body {
             padding-left: 30px;
             flex-grow: 1
           }
+          .part-left {
+            flex-grow: 1;
+          }
+          .part-right {
+            flex-grow: 1;
+          }
           .status-info {
             flex-grow: 1;
             padding-right: 20px;
+            padding-bottom: 20px;
             .title {
               border-bottom: 1px solid lightgray;
               margin-bottom: 0px;
@@ -237,4 +244,8 @@ body {
       border-bottom: 1px solid lightgray;
     }
   }
+}
+.rating {
+  margin-top: 5px !important;
+  margin-left: 5px;
 }

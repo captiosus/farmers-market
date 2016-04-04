@@ -249,6 +249,15 @@ input:focus {
   text-align: center;
   color: red; }
 
+.c-rating__item {
+  background-repeat: no-repeat;
+  padding: 0px !important;
+  width: 25px; }
+
+.rating {
+  display: flex;
+  padding-left: 0px; }
+
 body {
   background-color: #F5F4F4; }
 

@@ -249,6 +249,15 @@ input:focus {
   text-align: center;
   color: red; }
 
+.c-rating__item {
+  background-repeat: no-repeat;
+  padding: 0px !important;
+  width: 25px; }
+
+.rating {
+  display: flex;
+  padding-left: 0px; }
+
 body {
   background: url("../img/brownstones.png") no-repeat bottom center;
   background-size: cover;
@@ -328,7 +337,8 @@ body {
     #plant-container #login-button .button {
       background-color: #eb9675;
       border: 3px solid green;
-      color: darkgreen; }
+      color: darkgreen;
+      cursor: pointer; }
   #plant-container #register-button {
     width: 150px;
     text-align: center;
@@ -338,6 +348,7 @@ body {
     #plant-container #register-button .button {
       background-color: #eb9675;
       border: 3px solid green;
-      color: darkgreen; }
+      color: darkgreen;
+      cursor: pointer; }
 
 /*# sourceMappingURL=index.css.map */

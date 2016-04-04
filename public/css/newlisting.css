@@ -249,6 +249,15 @@ input:focus {
   text-align: center;
   color: red; }
 
+.c-rating__item {
+  background-repeat: no-repeat;
+  padding: 0px !important;
+  width: 25px; }
+
+.rating {
+  display: flex;
+  padding-left: 0px; }
+
 body {
   background-color: #F5F4F4; }
 
@@ -305,7 +314,8 @@ body {
     display: block;
     vertical-align: middle;
     margin: 5px;
-    cursor: pointer; }
+    cursor: pointer;
+    pointer-events: all; }
   .submission .checkbox + .checkbox-label:before {
     content: '';
     background: #fff;
@@ -383,10 +393,10 @@ body {
       .submission #pic-upload .dz-message:hover {
         cursor: pointer; }
     .submission #pic-upload .pic-container {
-      order: 2;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      padding-top: 30px; }
     .submission #pic-upload .dz-preview {
       width: 140px;
       margin: 0px 5px 0px 5px; }
@@ -400,7 +410,9 @@ body {
       line-height: 20px;
       border-radius: 20px;
       border: 1px solid gray;
-      color: gray; }
+      color: gray;
+      pointer-events: all;
+      text-align: center; }
   .submission .dz-max-files-reached {
     pointer-events: none;
     cursor: default; }
@@ -437,5 +449,8 @@ body {
 
 .order12 {
   order: 12; }
+
+.order13 {
+  order: 13; }
 
 /*# sourceMappingURL=newlisting.css.map */

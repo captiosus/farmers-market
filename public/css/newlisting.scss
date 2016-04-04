@@ -65,6 +65,7 @@ body {
       vertical-align: middle;
       margin: 5px;
       cursor: pointer;
+      pointer-events: all;
   }
   .checkbox + .checkbox-label:before {
       content: '';
@@ -154,10 +155,10 @@ body {
       }
     }
     .pic-container {
-      order: 2;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      padding-top: 30px;
     }
     .dz-preview {
       width: 140px;
@@ -175,6 +176,8 @@ body {
       border-radius: 20px;
       border: 1px solid gray;
       color: gray;
+      pointer-events: all;
+      text-align: center;
     }
   }
   .dz-max-files-reached {
@@ -214,4 +217,7 @@ body {
 }
 .order12 {
   order: 12;
+}
+.order13 {
+  order: 13;
 }
