@@ -31,6 +31,7 @@ Dropzone.options.picUpload = { // The camelized version of the ID of the form el
     this.on("successmultiple", function(files, response) {
       // Gets triggered when the files have successfully been sent.
       // Redirect user or notify of success.
+      window.location.href="/listings";
     });
     this.on("errormultiple", function(files, response) {
       // Gets triggered when there was an error sending the files.

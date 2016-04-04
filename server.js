@@ -58,7 +58,7 @@ app.use(function(req, res, next){
   if(req.busboy){
     req.busboy.on('file', function(fieldname, file, filename, encoding, mimetype){
       if(!req.files) req.files = [];
-      var filepath = __dirname + "/uploads/" + filename;
+      var filepath = __dirname + "/public/uploads/" + filename;
       req.files.push({
         fieldname:fieldname,
         file:file,

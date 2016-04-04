@@ -3,6 +3,7 @@ extends layout.jade
 block head
   title= "Home Screen"
   link(href='public/css/newlisting.css', rel='stylesheet')
+  script(src="public/bower/jquery/dist/jquery.min.js")
 
 block body
   .submission
@@ -47,6 +48,5 @@ block body
           | Submit
 
 block endscript
-  script(src="public/bower/jquery/dist/jquery.min.js")
   script(src="public/js/dropzone.js")
   script(src="public/js/newlisting.js")
