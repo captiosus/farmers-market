@@ -243,6 +243,12 @@ body {
 input:focus {
   outline: none; }
 
+.error {
+  margin: 0px;
+  font-size: 14px;
+  text-align: center;
+  color: red; }
+
 .middle .messages-container {
   max-height: 800px;
   width: 600px;

@@ -143,7 +143,7 @@ body {
       font-size: 20px;
       display: flex;
       flex-wrap: wrap;
-      order: 5;
+      order: 6;
       padding: 40px 30px 40px 30px;
       pointer-events: all;
       @media (max-width: 600px) {
@@ -194,8 +194,8 @@ body {
 .order4 {
   order: 4;
 }
-.order6 {
-  order: 6;
+.order5 {
+  order: 5;
 }
 .order7 {
   order: 7;
@@ -211,4 +211,7 @@ body {
 }
 .order11 {
   order: 11;
+}
+.order12 {
+  order: 12;
 }

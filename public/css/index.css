@@ -243,6 +243,12 @@ body {
 input:focus {
   outline: none; }
 
+.error {
+  margin: 0px;
+  font-size: 14px;
+  text-align: center;
+  color: red; }
+
 body {
   background: url("../img/brownstones.png") no-repeat bottom center;
   background-size: cover;
@@ -270,7 +276,10 @@ body {
     width: 250px;
     text-align: center;
     margin-top: 0px;
-    height: 83px; }
+    height: 83px;
+    flex-wrap: wrap; }
+    #plant-container #zipcode .error {
+      color: black; }
     #plant-container #zipcode form {
       display: flex;
       align-items: center; }

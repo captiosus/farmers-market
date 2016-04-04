@@ -31,6 +31,10 @@ body {
     text-align: center;
     margin-top: 0px;
     height: 83px;
+    flex-wrap: wrap;
+    .error {
+      color: black;
+    }
     form {
       display: flex;
       align-items: center;
