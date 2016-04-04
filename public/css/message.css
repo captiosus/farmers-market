@@ -31,7 +31,8 @@ body {
 .image-large {
   height: 200px;
   width: 200px;
-  background-color: lightblue; }
+  background-color: lightblue;
+  border: 3px solid #31bc75; }
   .image-large img {
     height: 200px;
     width: 200px; }
@@ -47,7 +48,9 @@ body {
 .image-small {
   height: 80px;
   width: 80px;
-  background-color: lightblue; }
+  background-color: lightblue;
+  cursor: pointer;
+  border: 3px solid #31bc75; }
   .image-small img {
     height: 80px;
     width: 80px; }

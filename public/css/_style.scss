@@ -41,6 +41,7 @@ body {
     height: 200px;
     width: 200px;
   }
+  border: 3px solid $primary;
 }
 .image-medium {
   height: 160px;
@@ -59,6 +60,8 @@ body {
     height: 80px;
     width: 80px;
   }
+  cursor: pointer;
+  border: 3px solid $primary;
 }
 .title {
   font-size: 18px;
