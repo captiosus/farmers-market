@@ -78,7 +78,7 @@ router.post('/listings', function(request, response){
 });
 
 router.get('/newlisting', function(request, response){
-  response.render('newlisting');
+  response.render('newlisting', {request:request});
 });
 router.post('/newlisting', function(request, response){
   console.log(request.body);

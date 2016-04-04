@@ -5,6 +5,7 @@ Dropzone.options.picUpload = { // The camelized version of the ID of the form el
   autoProcessQueue: false,
   uploadMultiple: true,
   parallelUploads: 4,
+  previewsContainer: ".pic-container",
   maxFiles: 4,
   // The setting up of the dropzone
   init: function() {

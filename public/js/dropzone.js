@@ -1769,8 +1769,6 @@
 var message = document.getElementsByClassName("dz-message")
 
 Dropzone.options.picUpload = {
-  url:'/file/post',
-  previewsContainer: ".pic-container",
   maxFiles: 4,
   init:function(){
     var thisdropzone = this;
