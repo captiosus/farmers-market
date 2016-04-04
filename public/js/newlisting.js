@@ -1,3 +1,5 @@
+// Dropzone.autoDiscover = false;
+
 
 Dropzone.options.picUpload = { // The camelized version of the ID of the form element
   // The configuration we've talked about above
@@ -17,6 +19,7 @@ Dropzone.options.picUpload = { // The camelized version of the ID of the form el
       e.preventDefault();
       e.stopPropagation();
       myDropzone.processQueue();
+      console.log(e);
     });
 
     // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
@@ -24,7 +27,6 @@ Dropzone.options.picUpload = { // The camelized version of the ID of the form el
     this.on("sendingmultiple", function(files, xhr, formData) {
       // Gets triggered when the form is actually being sent.
       // Hide the success button or the complete form.
-      console.log(files);
     });
     this.on("successmultiple", function(files, response) {
       // Gets triggered when the files have successfully been sent.

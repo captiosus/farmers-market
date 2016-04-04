@@ -43,7 +43,7 @@ app.use(session({
   saveUninitialized: true
 }));
 
-// app.use(busboy());
+app.use(busboy());
 app.use(morgan(':date[web] :method :url :req[header] :remote-addr :status'));
 app.use('/public',
         express.static(__dirname + '/public'));
@@ -54,34 +54,37 @@ app.use('/shared',
 // Use request.body for POST request params.
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use(function(req, res, next){
-//   if(req.busboy){
-//     req.busboy.on('file', function(fieldname, file, filename, encoding, mimetype){
-//       if(!req.files) req.files = [];
-//       var filepath = __dirname + "/uploads/" + filename;
-//       req.files.push({
-//         fieldname:fieldname,
-//         file:file,
-//         filename:filename,
-//         encoding:encoding,
-//         mimetype:mimetype,
-//         filepath: filepath
-//       });
-//       var fstream = fs.createWriteStream(filepath);
-//       file.pipe(fstream);
-//       fstream.on("close", function(){
-//         console.log("finished file", file);
-//       })
-//     });
-//     req.busboy.on('finish', function(){
-//       console.log("uploaded");
-//       next();
-//     });
-//     req.pipe(req.busboy);
-//   }else{
-//     next();
-//   }
-// });
+app.use(function(req, res, next){
+  if(req.busboy){
+    req.busboy.on('file', function(fieldname, file, filename, encoding, mimetype){
+      if(!req.files) req.files = [];
+      var filepath = __dirname + "/uploads/" + filename;
+      req.files.push({
+        fieldname:fieldname,
+        file:file,
+        filename:filename,
+        encoding:encoding,
+        mimetype:mimetype,
+        filepath: filepath
+      });
+      var fstream = fs.createWriteStream(filepath);
+      file.pipe(fstream);
+      fstream.on("close", function(){
+        console.log("finished file", file);
+      })
+    });
+    req.busboy.on('field', function(key, value, keyTruncated, valueTruncated) {
+      req.body[key] = value;
+    });
+    req.busboy.on('finish', function(){
+      console.log("uploaded");
+      next();
+    });
+    req.pipe(req.busboy);
+  }else{
+    next();
+  }
+});
 
 app.use('/', router);
 
