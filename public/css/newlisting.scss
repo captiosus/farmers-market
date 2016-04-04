@@ -21,6 +21,7 @@ body {
     border-bottom: 1px solid lightgray;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-top: -40px;
     @media (max-width: 600px) {
       padding-left: 10px;
     }
@@ -50,6 +51,7 @@ body {
     background-color: white;
     border: 5px solid $primary;
     cursor: pointer;
+    pointer-events: all;
     &:focus {
       outline: none;
     }
@@ -86,6 +88,7 @@ body {
     width: 335px;
     font-size: 16px;
     padding: 5px 5px 5px 5px;
+    pointer-events: all;
     @media (max-width: 600px) {
       width: 85%;
     }
@@ -104,7 +107,7 @@ body {
     .price-container {
       width: 200px;
       @media (max-width: 600px) {
-        width: 100%
+        width: 100%;
       }
       .input {
         display: block;
@@ -112,7 +115,7 @@ body {
         margin-top: 5px;
         width: 200px;
         @media (max-width: 600px) {
-          width: 80%
+          width: 80%;
         }
       }
       #bid-price {
@@ -121,24 +124,34 @@ body {
     }
   }
   #pic-upload {
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 5px solid $primary;
-    text-align: center;
     font-size: 20px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    pointer-events: none;
     @media (max-width: 600px) {
-      width: 70%
+      width: 70%;
     }
     &:hover {
       cursor: pointer;
     }
     .dz-message {
-      padding: 50px 20px 50px 20px;
-      order: 1;
-      width: 100%;
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 5px solid $primary;
+      text-align: center;
+      font-size: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      order: 5;
+      padding: 40px 30px 40px 30px;
+      pointer-events: all;
+      @media (max-width: 600px) {
+        width: 70%
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
     .pic-container {
       order: 2;
@@ -168,4 +181,34 @@ body {
     pointer-events: none;
     cursor: default;
   }
+}
+.order1 {
+  order: 1;
+}
+.order2 {
+  order: 2;
+}
+.order3 {
+  order: 3;
+}
+.order4 {
+  order: 4;
+}
+.order6 {
+  order: 6;
+}
+.order7 {
+  order: 7;
+}
+.order8 {
+  order: 8;
+}
+.order9 {
+  order: 9;
+}
+.order10 {
+  order: 10;
+}
+.order11 {
+  order: 11;
 }
