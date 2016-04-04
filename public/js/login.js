@@ -46,15 +46,20 @@ $("#exit-register").on("click", function() {
 $('#loginbutton').click(function(){
   var data = {};
   $('#login input').each(function(){
-      data[$(this).attr('name')] = $(this).val
-  },$.ajax({
+      data[$(this).attr('name')] = $(this).val();
+  });
+  $.ajax({
     url:'/login',
     method:'POST',
     data:data,
     success:function(result){
-      console.log(result);
+      if(!result.success){
+        $('#login p.err').html(result.message);
+      }else{
+        window.location.href = '/';
+      }
     }
-  }));
+  });
 })
 
 $('#registerbutton').click(function(){
@@ -69,13 +74,15 @@ $('#registerbutton').click(function(){
   $.ajax({
     url:'/register',
     method:'POST',
-    data:data,
+    data: data,
     success:function(result){
-      console.log(result);
+      if(!result.success){
+        $('#register p.err').html(result.message);
+      }
+      window.location.href="/listings";
+    },
+    error:function(err){
+      console.log(err);
     }
   });
-})
-
-$('#registerbutton').click(function(){
-
 })
