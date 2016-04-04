@@ -37,6 +37,10 @@ body {
   height: 200px;
   width: 200px;
   background-color: lightblue;
+  img {
+    height: 200px;
+    width: 200px;
+  }
 }
 .image-medium {
   height: 160px;
@@ -51,6 +55,10 @@ body {
   height: 80px;
   width: 80px;
   background-color: lightblue;
+  img {
+    height: 80px;
+    width: 80px;
+  }
 }
 .title {
   font-size: 18px;
