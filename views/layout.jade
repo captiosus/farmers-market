@@ -24,8 +24,9 @@ html(lang="en")
           a(href="/message")
             i.fa.fa-envelope-o
           span |
-          a(href="/newlisting") New Listing
-          span |
+          if request.session.username != undefined
+            a(href="/newlisting") New Listing
+            span |
           if request.session.username == undefined
             a(href="#", id="open-login")
               | Login

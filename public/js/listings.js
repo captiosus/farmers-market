@@ -36,6 +36,7 @@ var generateListings = function(){
 };
 var updateListingTable= function (){
 	var filtered = filter(listings);
+	var filtered = listings;
 	$('#listings').html('');
 	for (var listingkey in filtered){
 		var listinghtml = $('<li>');
@@ -44,7 +45,7 @@ var updateListingTable= function (){
 		listinghtml.attr('id', listing._id);
 		var teaser = $('<div>', {class:'image-medium'})
 		if(listing.pictures && listing.pictures[0]){
-			var image = $('<img>', {src:listing.pictures[0]})
+			var image = $('<img>', {src:'../uploads/' + listing.pictures[0]})
 			teaser.append(image);
 			listinghtml.append(teaser);
 		}

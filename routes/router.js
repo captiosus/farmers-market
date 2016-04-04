@@ -81,8 +81,14 @@ router.get('/newlisting', function(request, response){
   response.render('newlisting', {request:request});
 });
 router.post('/newlisting', function(request, response){
-  console.log(request.body);
-  console.log(request.files);
+  var body = request.body;
+  var files = request.files;
+  body.pictures = [];
+  for (var filekey in files){
+    body.pictures.push(files[filekey]['filename'])
+  }
+  console.log(body);
+  dbm.createListing(request.session.username, body)
   response.send(false);
 });
 

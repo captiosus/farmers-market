@@ -16,32 +16,34 @@ block body
       input.order4.input(type="text", name="produce-type", id="produce-type")
       p.title.order5.dropzone-previews
         | Picture Upload
-      .pic-container.order7
-      p.title.order8
-        | Quantity 
-      input.order9.input(type="text", name="quantity", id="quantity")
-      p.title.order10
+        .pic-container
+      p.title.order7
+        | Quantity
+      input.order8.input(type="text", name="quantity", id="quantity")
+      p.title.order9 Zipcode
+      input.order10.input(type="text", name="zipcode", id="zipcode")
+      p.title.order11
         | Pricing
-        .bid.order11
+        .bid.order12
           .checkbox-container
             input(type="checkbox", name="bid", class="checkbox", id="bid")
             label(for="bid", class="checkbox-label")
               | Bid
           .price-container
-            label(for="bid-price")
+            label(for="bidprice")
               | Minimum Bid
-            input.input(type="text", name="bid-price", id="bid-price")
+            input.input(type="text", name="bidprice", id="bid-price")
         .bid.order12
           .checkbox-container
             input(type="checkbox", name="buy", class="checkbox", id="buy")
             label(for="buy", class="checkbox-label")
               | Buy
           .price-container
-            label(for="buy-price")
+            label(for="buyprice")
               | Buy Price
-            input.input(type="text", name="buy-price", id="buy-price")
+            input.input(type="text", name="buyprice", id="buy-price")
       .submit-button-container.order13
-        button(id="submit-button", type="button")
+        button(id="submit-button", type="submit")
           | Submit
 
 block endscript
