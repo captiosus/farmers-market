@@ -8,12 +8,9 @@ block head
 block body
   .top
     .user-info
-      p#user
-        | Captiosus
-      p#email.inner
-        | royxu652@gmail.com
-      p#zipcode.inner
-        | 11229
+      p#user #{request.session.username}
+      p#email.inner bleepbloopsify@gmail.com
+      p#zipcode.inner 11229
   .middle
     .listings-container
       .title-container
@@ -22,69 +19,7 @@ block body
       ul.listings
         li
           .image-medium
-          .info-container
-            p.produce.title
-              | Apples
-            .produce-info
-              p.quantity
-                span
-                  | Quantity: 
-                span#quantity
-                  | 5
-              p.bid
-                span
-                  | Bid Price: $
-                span#bid
-                  | 10
-              p.buy
-                span
-                  | Buy Price: $
-                span#buy
-                  | 10
-        li
-          .image-medium
-          .info-container
-            p.produce.title
-              | Apples
-            .produce-info
-              p.quantity
-                span
-                  | Quantity: 
-                span#quantity
-                  | 5
-              p.bid
-                span
-                  | Bid Price: $
-                span#bid
-                  | 10
-              p.buy
-                span
-                  | Buy Price: $
-                span#buy
-                  | 10
-        li
-          .image-medium
-          .info-container
-            p.produce.title
-              | Apples
-            .produce-info
-              p.quantity
-                span
-                  | Quantity: 
-                span#quantity
-                  | 5
-              p.bid
-                span
-                  | Bid Price: $
-                span#bid
-                  | 10
-              p.buy
-                span
-                  | Buy Price: $
-                span#buy
-                  | 10
-        li
-          .image-medium
+            img(src="public/uploads/apples.jpg")
           .info-container
             p.produce.title
               | Apples
